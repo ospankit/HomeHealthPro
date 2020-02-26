@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC5A90E32406983D00682179 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90E22406983D00682179 /* AppDelegate.swift */; };
+		BC5A90E52406983D00682179 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90E42406983D00682179 /* SceneDelegate.swift */; };
+		BC5A90E72406983D00682179 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90E62406983D00682179 /* ViewController.swift */; };
+		BC5A90EA2406983D00682179 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A90E82406983D00682179 /* Main.storyboard */; };
+		BC5A90ED2406983D00682179 /* HomeHealthPro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90EB2406983D00682179 /* HomeHealthPro.xcdatamodeld */; };
+		BC5A90EF2406985200682179 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5A90EE2406985200682179 /* Assets.xcassets */; };
+		BC5A90F22406985200682179 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A90F02406985200682179 /* LaunchScreen.storyboard */; };
+		BC5A90FD2406985300682179 /* HomeHealthProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90FC2406985300682179 /* HomeHealthProTests.swift */; };
+		BC5A91082406985300682179 /* HomeHealthProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A91072406985300682179 /* HomeHealthProUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC5A90F92406985300682179 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5A90D72406983D00682179 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC5A90DE2406983D00682179;
+			remoteInfo = HomeHealthPro;
+		};
+		BC5A91042406985300682179 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5A90D72406983D00682179 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC5A90DE2406983D00682179;
+			remoteInfo = HomeHealthPro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC5A90DF2406983D00682179 /* HomeHealthPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeHealthPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5A90E22406983D00682179 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC5A90E42406983D00682179 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BC5A90E62406983D00682179 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC5A90E92406983D00682179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC5A90EC2406983D00682179 /* HomeHealthPro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeHealthPro.xcdatamodel; sourceTree = "<group>"; };
+		BC5A90EE2406985200682179 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC5A90F12406985200682179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC5A90F32406985200682179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5A90F82406985300682179 /* HomeHealthProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeHealthProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5A90FC2406985300682179 /* HomeHealthProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHealthProTests.swift; sourceTree = "<group>"; };
+		BC5A90FE2406985300682179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5A91032406985300682179 /* HomeHealthProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeHealthProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5A91072406985300682179 /* HomeHealthProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHealthProUITests.swift; sourceTree = "<group>"; };
+		BC5A91092406985300682179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC5A90DC2406983D00682179 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC5A90F52406985300682179 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC5A91002406985300682179 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC5A90D62406983D00682179 = {
+			isa = PBXGroup;
+			children = (
+				BC5A90E12406983D00682179 /* HomeHealthPro */,
+				BC5A90FB2406985300682179 /* HomeHealthProTests */,
+				BC5A91062406985300682179 /* HomeHealthProUITests */,
+				BC5A90E02406983D00682179 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC5A90E02406983D00682179 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A90DF2406983D00682179 /* HomeHealthPro.app */,
+				BC5A90F82406985300682179 /* HomeHealthProTests.xctest */,
+				BC5A91032406985300682179 /* HomeHealthProUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC5A90E12406983D00682179 /* HomeHealthPro */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A90E22406983D00682179 /* AppDelegate.swift */,
+				BC5A90E42406983D00682179 /* SceneDelegate.swift */,
+				BC5A90E62406983D00682179 /* ViewController.swift */,
+				BC5A90E82406983D00682179 /* Main.storyboard */,
+				BC5A90EE2406985200682179 /* Assets.xcassets */,
+				BC5A90F02406985200682179 /* LaunchScreen.storyboard */,
+				BC5A90F32406985200682179 /* Info.plist */,
+				BC5A90EB2406983D00682179 /* HomeHealthPro.xcdatamodeld */,
+			);
+			path = HomeHealthPro;
+			sourceTree = "<group>";
+		};
+		BC5A90FB2406985300682179 /* HomeHealthProTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A90FC2406985300682179 /* HomeHealthProTests.swift */,
+				BC5A90FE2406985300682179 /* Info.plist */,
+			);
+			path = HomeHealthProTests;
+			sourceTree = "<group>";
+		};
+		BC5A91062406985300682179 /* HomeHealthProUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A91072406985300682179 /* HomeHealthProUITests.swift */,
+				BC5A91092406985300682179 /* Info.plist */,
+			);
+			path = HomeHealthProUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC5A90DE2406983D00682179 /* HomeHealthPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC5A910C2406985300682179 /* Build configuration list for PBXNativeTarget "HomeHealthPro" */;
+			buildPhases = (
+				BC5A90DB2406983D00682179 /* Sources */,
+				BC5A90DC2406983D00682179 /* Frameworks */,
+				BC5A90DD2406983D00682179 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomeHealthPro;
+			productName = HomeHealthPro;
+			productReference = BC5A90DF2406983D00682179 /* HomeHealthPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC5A90F72406985300682179 /* HomeHealthProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC5A910F2406985300682179 /* Build configuration list for PBXNativeTarget "HomeHealthProTests" */;
+			buildPhases = (
+				BC5A90F42406985300682179 /* Sources */,
+				BC5A90F52406985300682179 /* Frameworks */,
+				BC5A90F62406985300682179 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC5A90FA2406985300682179 /* PBXTargetDependency */,
+			);
+			name = HomeHealthProTests;
+			productName = HomeHealthProTests;
+			productReference = BC5A90F82406985300682179 /* HomeHealthProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC5A91022406985300682179 /* HomeHealthProUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC5A91122406985300682179 /* Build configuration list for PBXNativeTarget "HomeHealthProUITests" */;
+			buildPhases = (
+				BC5A90FF2406985300682179 /* Sources */,
+				BC5A91002406985300682179 /* Frameworks */,
+				BC5A91012406985300682179 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC5A91052406985300682179 /* PBXTargetDependency */,
+			);
+			name = HomeHealthProUITests;
+			productName = HomeHealthProUITests;
+			productReference = BC5A91032406985300682179 /* HomeHealthProUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC5A90D72406983D00682179 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = HomeHealthPro;
+				TargetAttributes = {
+					BC5A90DE2406983D00682179 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					BC5A90F72406985300682179 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = BC5A90DE2406983D00682179;
+					};
+					BC5A91022406985300682179 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = BC5A90DE2406983D00682179;
+					};
+				};
+			};
+			buildConfigurationList = BC5A90DA2406983D00682179 /* Build configuration list for PBXProject "HomeHealthPro" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC5A90D62406983D00682179;
+			productRefGroup = BC5A90E02406983D00682179 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC5A90DE2406983D00682179 /* HomeHealthPro */,
+				BC5A90F72406985300682179 /* HomeHealthProTests */,
+				BC5A91022406985300682179 /* HomeHealthProUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC5A90DD2406983D00682179 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5A90F22406985200682179 /* LaunchScreen.storyboard in Resources */,
+				BC5A90EF2406985200682179 /* Assets.xcassets in Resources */,
+				BC5A90EA2406983D00682179 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC5A90F62406985300682179 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC5A91012406985300682179 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC5A90DB2406983D00682179 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5A90E72406983D00682179 /* ViewController.swift in Sources */,
+				BC5A90E32406983D00682179 /* AppDelegate.swift in Sources */,
+				BC5A90ED2406983D00682179 /* HomeHealthPro.xcdatamodeld in Sources */,
+				BC5A90E52406983D00682179 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC5A90F42406985300682179 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5A90FD2406985300682179 /* HomeHealthProTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC5A90FF2406985300682179 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC5A91082406985300682179 /* HomeHealthProUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC5A90FA2406985300682179 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC5A90DE2406983D00682179 /* HomeHealthPro */;
+			targetProxy = BC5A90F92406985300682179 /* PBXContainerItemProxy */;
+		};
+		BC5A91052406985300682179 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC5A90DE2406983D00682179 /* HomeHealthPro */;
+			targetProxy = BC5A91042406985300682179 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC5A90E82406983D00682179 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC5A90E92406983D00682179 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC5A90F02406985200682179 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC5A90F12406985200682179 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC5A910A2406985300682179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC5A910B2406985300682179 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC5A910D2406985300682179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeHealthPro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeHealthPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC5A910E2406985300682179 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeHealthPro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeHealthPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BC5A91102406985300682179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeHealthProTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeHealthProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeHealthPro.app/HomeHealthPro";
+			};
+			name = Debug;
+		};
+		BC5A91112406985300682179 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeHealthProTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeHealthProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeHealthPro.app/HomeHealthPro";
+			};
+			name = Release;
+		};
+		BC5A91132406985300682179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeHealthProUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeHealthProUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HomeHealthPro;
+			};
+			name = Debug;
+		};
+		BC5A91142406985300682179 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HomeHealthProUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HomeHealthProUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HomeHealthPro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC5A90DA2406983D00682179 /* Build configuration list for PBXProject "HomeHealthPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC5A910A2406985300682179 /* Debug */,
+				BC5A910B2406985300682179 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC5A910C2406985300682179 /* Build configuration list for PBXNativeTarget "HomeHealthPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC5A910D2406985300682179 /* Debug */,
+				BC5A910E2406985300682179 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC5A910F2406985300682179 /* Build configuration list for PBXNativeTarget "HomeHealthProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC5A91102406985300682179 /* Debug */,
+				BC5A91112406985300682179 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC5A91122406985300682179 /* Build configuration list for PBXNativeTarget "HomeHealthProUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC5A91132406985300682179 /* Debug */,
+				BC5A91142406985300682179 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BC5A90EB2406983D00682179 /* HomeHealthPro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BC5A90EC2406983D00682179 /* HomeHealthPro.xcdatamodel */,
+			);
+			currentVersion = BC5A90EC2406983D00682179 /* HomeHealthPro.xcdatamodel */;
+			path = HomeHealthPro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BC5A90D72406983D00682179 /* Project object */;
+}
