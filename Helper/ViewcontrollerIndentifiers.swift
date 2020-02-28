@@ -12,7 +12,8 @@ enum Controller {
     case LoginVc
     case ForgetPasswordVc
     case SignUpVC
-    case DashboardViewController
+    case DashboardVC
+    case tabBarDashboard
 }
 
 extension Controller {
@@ -21,7 +22,8 @@ extension Controller {
         case .LoginVc: return "LoginVc"
         case .ForgetPasswordVc: return "ForgetPasswordVc"
         case .SignUpVC: return "SignUpVC"
-        case .DashboardViewController: return "DashboardViewController"
+        case .DashboardVC: return "DashboardVC"
+        case .tabBarDashboard: return "TabBarDashboard"
         }
     }
 }

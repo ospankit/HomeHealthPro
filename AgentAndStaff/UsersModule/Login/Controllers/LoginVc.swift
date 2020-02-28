@@ -6,6 +6,8 @@
 //  Copyright © 2020 HomeHealthPro. All rights reserved.
 //
 
+//bJKLV3J2AWDJch-Lz_Y8
+
 import UIKit
 
 class LoginVc: UIViewController {
@@ -45,6 +47,8 @@ class LoginVc: UIViewController {
             Alert().alertOkView(viewController:self,message:ReuseAbleIdentifier.enterPassword.identifier)
             return
         }
+        let vc = UIStoryboard.init(name: StoryBoard.Dashboard.indentifier, bundle: nil).instantiateViewController(identifier: Controller.tabBarDashboard.identifier) as! TabBarDashboard
+            navigationController?.pushViewController(vc, animated: false)
     }
 }
 

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Clinicians-->
+        <scene sceneID="G3a-br-Rfn">
+            <objects>
+                <viewController id="rDV-cL-x2h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fAM-7K-gd5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="8mf-hY-v77"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Clinicians" image="Clinicians" id="lvY-Uq-csh">
+                        <inset key="imageInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmT-00-1ad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="810"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RSl-HU-u4l">
+            <objects>
+                <viewController id="W0x-gU-wCI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aIl-0g-Ndx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="luT-9m-kWY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="Group 16" id="fyA-1T-YB8">
+                        <inset key="imageInsets" minX="35" minY="0.0" maxX="35" maxY="32"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1I-Rb-N1c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="587" y="810"/>
+        </scene>
+        <!--My Account-->
+        <scene sceneID="CoV-9V-G8K">
+            <objects>
+                <viewController id="MMI-IS-Odj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jIG-Ov-FGs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qRU-SU-iFZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Account" image="My Account" id="aKA-sF-jrv">
+                        <inset key="imageInsets" minX="9" minY="9" maxX="9" maxY="9"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AWU-hE-lY6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="810"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="lHf-yl-kK9">
+            <objects>
+                <viewController id="KTa-Zn-buZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MY1-Cl-hQE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Rm5-jb-mTJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="8wf-pd-ZQr">
+                        <inset key="imageInsets" minX="9" minY="9" maxX="9" maxY="9"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMS-0P-hVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1909" y="810"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="syh-bW-wM5">
+            <objects>
+                <viewController storyboardIdentifier="DashboardVC" id="fFs-p0-R6u" customClass="DashboardVC" customModule="HomeHealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghF-Xb-y7T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2Q5-7C-x41"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="Dashboard" id="KDt-wm-oKS">
+                        <inset key="imageInsets" minX="9" minY="9" maxX="9" maxY="9"/>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NoT-40-MKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="810"/>
+        </scene>
+        <!--Tab Bar Dashboard-->
+        <scene sceneID="RKQ-mL-5dK">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarDashboard" id="UBQ-4z-bWH" customClass="TabBarDashboard" customModule="HomeHealthPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BkC-rr-iW5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <outlet property="tabBarDashbard" destination="BkC-rr-iW5" id="Ta7-uT-DEf"/>
+                        <segue destination="fFs-p0-R6u" kind="relationship" relationship="viewControllers" id="FLM-U4-POs"/>
+                        <segue destination="rDV-cL-x2h" kind="relationship" relationship="viewControllers" id="TGz-Sc-Cpi"/>
+                        <segue destination="W0x-gU-wCI" kind="relationship" relationship="viewControllers" id="nHE-qx-CBZ"/>
+                        <segue destination="MMI-IS-Odj" kind="relationship" relationship="viewControllers" id="XX6-dW-xgp"/>
+                        <segue destination="KTa-Zn-buZ" kind="relationship" relationship="viewControllers" id="Hw6-rf-MV1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9F-me-LjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="-19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Clinicians" width="31" height="40"/>
+        <image name="Dashboard" width="40" height="40"/>
+        <image name="Group 16" width="140" height="143.5"/>
+        <image name="My Account" width="40" height="40"/>
+        <image name="Settings" width="40" height="40"/>
+    </resources>
+</document>

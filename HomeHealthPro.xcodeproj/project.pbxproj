@@ -20,6 +20,9 @@
 		BC4B2CA72408E0D200C2173B /* SF-Pro-Display-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2CA02408E0D200C2173B /* SF-Pro-Display-Black.ttf */; };
 		BC4B2CB42409113100C2173B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CB32409113100C2173B /* Alert.swift */; };
 		BC4B2CB62409132100C2173B /* AppNameIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */; };
+		BC4B2CBE2409213B00C2173B /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2CBD2409213B00C2173B /* Dashboard.storyboard */; };
+		BC4B2CC0240929DF00C2173B /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CBF240929DF00C2173B /* DashboardVC.swift */; };
+		BC4B2CC424093C5900C2173B /* TabBarDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CC324093C5900C2173B /* TabBarDashboard.swift */; };
 		BC5A90E32406983D00682179 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90E22406983D00682179 /* AppDelegate.swift */; };
 		BC5A90E52406983D00682179 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90E42406983D00682179 /* SceneDelegate.swift */; };
 		BC5A90ED2406983D00682179 /* HomeHealthPro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90EB2406983D00682179 /* HomeHealthPro.xcdatamodeld */; };
@@ -71,6 +74,9 @@
 		BC4B2CA02408E0D200C2173B /* SF-Pro-Display-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.ttf"; sourceTree = "<group>"; };
 		BC4B2CB32409113100C2173B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNameIdentifier.swift; sourceTree = "<group>"; };
+		BC4B2CBD2409213B00C2173B /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		BC4B2CBF240929DF00C2173B /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		BC4B2CC324093C5900C2173B /* TabBarDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDashboard.swift; sourceTree = "<group>"; };
 		BC5A90DF2406983D00682179 /* HomeHealthPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeHealthPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5A90E22406983D00682179 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5A90E42406983D00682179 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +203,56 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		BC4B2CB72409207400C2173B /* DashboardModule */ = {
+			isa = PBXGroup;
+			children = (
+				BC4B2CBD2409213B00C2173B /* Dashboard.storyboard */,
+				BC4B2CB8240920A400C2173B /* Dashboard */,
+			);
+			path = DashboardModule;
+			sourceTree = "<group>";
+		};
+		BC4B2CB8240920A400C2173B /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				BC4B2CBC2409210500C2173B /* Controllers */,
+				BC4B2CBB240920EE00C2173B /* ViewModel */,
+				BC4B2CBA240920E600C2173B /* View */,
+				BC4B2CB9240920C200C2173B /* Model */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		BC4B2CB9240920C200C2173B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC4B2CBA240920E600C2173B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC4B2CBB240920EE00C2173B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC4B2CBC2409210500C2173B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC4B2CBF240929DF00C2173B /* DashboardVC.swift */,
+				BC4B2CC324093C5900C2173B /* TabBarDashboard.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BC5A90D62406983D00682179 = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +312,7 @@
 		BC5A91172406989600682179 /* AgentAndStaff */ = {
 			isa = PBXGroup;
 			children = (
+				BC4B2CB72409207400C2173B /* DashboardModule */,
 				BC793F7E2407924D00AD2D47 /* UsersModule */,
 			);
 			path = AgentAndStaff;
@@ -496,6 +553,7 @@
 				BC4B2CA12408E0D200C2173B /* SF-Pro-Display-Heavy.ttf in Resources */,
 				BC5A90F22406985200682179 /* LaunchScreen.storyboard in Resources */,
 				BC4B2CA72408E0D200C2173B /* SF-Pro-Display-Black.ttf in Resources */,
+				BC4B2CBE2409213B00C2173B /* Dashboard.storyboard in Resources */,
 				BC5A90EF2406985200682179 /* Assets.xcassets in Resources */,
 				BC4B2CA32408E0D200C2173B /* SF-Pro-Display-Medium.ttf in Resources */,
 				BC4B2CA52408E0D200C2173B /* SF-Pro-Display-BlackItalic.ttf in Resources */,
@@ -631,6 +689,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC5A912F2406B63200682179 /* Extension.swift in Sources */,
+				BC4B2CC0240929DF00C2173B /* DashboardVC.swift in Sources */,
 				BC3674FF2407D222006EC471 /* SignUpVC.swift in Sources */,
 				BC5A90E32406983D00682179 /* AppDelegate.swift in Sources */,
 				BC793F8C2407C5D500AD2D47 /* StoryboardIndentifiers.swift in Sources */,
@@ -639,6 +698,7 @@
 				BC4B2CB42409113100C2173B /* Alert.swift in Sources */,
 				BC5A90ED2406983D00682179 /* HomeHealthPro.xcdatamodeld in Sources */,
 				BC5A912A24069D1300682179 /* LoginVc.swift in Sources */,
+				BC4B2CC424093C5900C2173B /* TabBarDashboard.swift in Sources */,
 				BC4B2CB62409132100C2173B /* AppNameIdentifier.swift in Sources */,
 				BC793F8624079A9200AD2D47 /* ForgetPasswordVc.swift in Sources */,
 				BC5A90E52406983D00682179 /* SceneDelegate.swift in Sources */,

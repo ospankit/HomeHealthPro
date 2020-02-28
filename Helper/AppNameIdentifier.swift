@@ -13,6 +13,7 @@ enum ReuseAbleIdentifier {
     case enterEmailAddress
     case enterPassword
     case enterUsername
+    case OK
 }
 
 extension ReuseAbleIdentifier {
@@ -22,6 +23,7 @@ extension ReuseAbleIdentifier {
         case .enterEmailAddress: return "Please enter Email Address."
         case .enterPassword: return "Please enter Password."
         case .enterUsername: return "Please enter Username."
+        case .OK: return "OK"
         }
     }
 }
