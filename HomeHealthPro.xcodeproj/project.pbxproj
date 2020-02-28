@@ -3,19 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DF9975F9EAFE13D892AD361 /* Pods_HomeHealthProTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F12E604AE2DDEA1BF1B83E /* Pods_HomeHealthProTests.framework */; };
+		AD71FCE9C71DAA0D062B2739 /* Pods_HomeHealthPro_HomeHealthProUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56D1528DB0AFEF70826060B /* Pods_HomeHealthPro_HomeHealthProUITests.framework */; };
+		BC3674FF2407D222006EC471 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3674FE2407D222006EC471 /* SignUpVC.swift */; };
+		BC3675012407DE71006EC471 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3675002407DE71006EC471 /* SkyFloatingLabelTextField.swift */; };
+		BC4B2CA12408E0D200C2173B /* SF-Pro-Display-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2C9A2408E0D100C2173B /* SF-Pro-Display-Heavy.ttf */; };
+		BC4B2CA22408E0D200C2173B /* SF-Pro-Display-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2C9B2408E0D100C2173B /* SF-Pro-Display-Regular.ttf */; };
+		BC4B2CA32408E0D200C2173B /* SF-Pro-Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2C9C2408E0D100C2173B /* SF-Pro-Display-Medium.ttf */; };
+		BC4B2CA42408E0D200C2173B /* SF-Pro-Display-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2C9D2408E0D100C2173B /* SF-Pro-Display-Light.ttf */; };
+		BC4B2CA52408E0D200C2173B /* SF-Pro-Display-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2C9E2408E0D100C2173B /* SF-Pro-Display-BlackItalic.ttf */; };
+		BC4B2CA62408E0D200C2173B /* SF-Pro-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2C9F2408E0D100C2173B /* SF-Pro-Display-Bold.ttf */; };
+		BC4B2CA72408E0D200C2173B /* SF-Pro-Display-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2CA02408E0D200C2173B /* SF-Pro-Display-Black.ttf */; };
+		BC4B2CB42409113100C2173B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CB32409113100C2173B /* Alert.swift */; };
+		BC4B2CB62409132100C2173B /* AppNameIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */; };
 		BC5A90E32406983D00682179 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90E22406983D00682179 /* AppDelegate.swift */; };
 		BC5A90E52406983D00682179 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90E42406983D00682179 /* SceneDelegate.swift */; };
-		BC5A90E72406983D00682179 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90E62406983D00682179 /* ViewController.swift */; };
-		BC5A90EA2406983D00682179 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A90E82406983D00682179 /* Main.storyboard */; };
 		BC5A90ED2406983D00682179 /* HomeHealthPro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90EB2406983D00682179 /* HomeHealthPro.xcdatamodeld */; };
 		BC5A90EF2406985200682179 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5A90EE2406985200682179 /* Assets.xcassets */; };
 		BC5A90F22406985200682179 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A90F02406985200682179 /* LaunchScreen.storyboard */; };
 		BC5A90FD2406985300682179 /* HomeHealthProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A90FC2406985300682179 /* HomeHealthProTests.swift */; };
 		BC5A91082406985300682179 /* HomeHealthProUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A91072406985300682179 /* HomeHealthProUITests.swift */; };
+		BC5A912824069CF900682179 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A912724069CF900682179 /* Login.storyboard */; };
+		BC5A912A24069D1300682179 /* LoginVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A912924069D1300682179 /* LoginVc.swift */; };
+		BC5A912F2406B63200682179 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A912E2406B63200682179 /* Extension.swift */; };
+		BC793F8624079A9200AD2D47 /* ForgetPasswordVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793F8524079A9200AD2D47 /* ForgetPasswordVc.swift */; };
+		BC793F8A2407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793F892407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift */; };
+		BC793F8C2407C5D500AD2D47 /* StoryboardIndentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */; };
+		D887E2352C7CA634E904F2B2 /* Pods_HomeHealthPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B6D23857AE9DCF26410A58 /* Pods_HomeHealthPro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +54,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BF5E06937B07DF328D2226A /* Pods-HomeHealthPro-HomeHealthProUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeHealthPro-HomeHealthProUITests.debug.xcconfig"; path = "Target Support Files/Pods-HomeHealthPro-HomeHealthProUITests/Pods-HomeHealthPro-HomeHealthProUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		26D1AD8D63055663035E508A /* Pods-HomeHealthPro-HomeHealthProUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeHealthPro-HomeHealthProUITests.release.xcconfig"; path = "Target Support Files/Pods-HomeHealthPro-HomeHealthProUITests/Pods-HomeHealthPro-HomeHealthProUITests.release.xcconfig"; sourceTree = "<group>"; };
+		40F12E604AE2DDEA1BF1B83E /* Pods_HomeHealthProTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeHealthProTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DFCD40C8169038F5326C056 /* Pods-HomeHealthPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeHealthPro.debug.xcconfig"; path = "Target Support Files/Pods-HomeHealthPro/Pods-HomeHealthPro.debug.xcconfig"; sourceTree = "<group>"; };
+		79B6D23857AE9DCF26410A58 /* Pods_HomeHealthPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeHealthPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A2B3DC9FE5418C2FF311F7 /* Pods-HomeHealthProTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeHealthProTests.release.xcconfig"; path = "Target Support Files/Pods-HomeHealthProTests/Pods-HomeHealthProTests.release.xcconfig"; sourceTree = "<group>"; };
+		BC3674FE2407D222006EC471 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		BC3675002407DE71006EC471 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		BC4B2C9A2408E0D100C2173B /* SF-Pro-Display-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.ttf"; sourceTree = "<group>"; };
+		BC4B2C9B2408E0D100C2173B /* SF-Pro-Display-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.ttf"; sourceTree = "<group>"; };
+		BC4B2C9C2408E0D100C2173B /* SF-Pro-Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.ttf"; sourceTree = "<group>"; };
+		BC4B2C9D2408E0D100C2173B /* SF-Pro-Display-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.ttf"; sourceTree = "<group>"; };
+		BC4B2C9E2408E0D100C2173B /* SF-Pro-Display-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BlackItalic.ttf"; sourceTree = "<group>"; };
+		BC4B2C9F2408E0D100C2173B /* SF-Pro-Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.ttf"; sourceTree = "<group>"; };
+		BC4B2CA02408E0D200C2173B /* SF-Pro-Display-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.ttf"; sourceTree = "<group>"; };
+		BC4B2CB32409113100C2173B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNameIdentifier.swift; sourceTree = "<group>"; };
 		BC5A90DF2406983D00682179 /* HomeHealthPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeHealthPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5A90E22406983D00682179 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5A90E42406983D00682179 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC5A90E62406983D00682179 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BC5A90E92406983D00682179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC5A90EC2406983D00682179 /* HomeHealthPro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeHealthPro.xcdatamodel; sourceTree = "<group>"; };
 		BC5A90EE2406985200682179 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC5A90F12406985200682179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +84,15 @@
 		BC5A91032406985300682179 /* HomeHealthProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeHealthProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5A91072406985300682179 /* HomeHealthProUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHealthProUITests.swift; sourceTree = "<group>"; };
 		BC5A91092406985300682179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC5A912724069CF900682179 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BC5A912924069D1300682179 /* LoginVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVc.swift; sourceTree = "<group>"; };
+		BC5A912E2406B63200682179 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		BC793F8524079A9200AD2D47 /* ForgetPasswordVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVc.swift; sourceTree = "<group>"; };
+		BC793F892407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewcontrollerIndentifiers.swift; sourceTree = "<group>"; };
+		BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIndentifiers.swift; sourceTree = "<group>"; };
+		D56D1528DB0AFEF70826060B /* Pods_HomeHealthPro_HomeHealthProUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeHealthPro_HomeHealthProUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F23811A5EF20729D9D864CEC /* Pods-HomeHealthProTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeHealthProTests.debug.xcconfig"; path = "Target Support Files/Pods-HomeHealthProTests/Pods-HomeHealthProTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDFD8D1457423D4CC81D15D8 /* Pods-HomeHealthPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeHealthPro.release.xcconfig"; path = "Target Support Files/Pods-HomeHealthPro/Pods-HomeHealthPro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D887E2352C7CA634E904F2B2 /* Pods_HomeHealthPro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF9975F9EAFE13D892AD361 /* Pods_HomeHealthProTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,19 +116,101 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD71FCE9C71DAA0D062B2739 /* Pods_HomeHealthPro_HomeHealthProUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73A53A3806B1B5D3C5DA7F8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79B6D23857AE9DCF26410A58 /* Pods_HomeHealthPro.framework */,
+				D56D1528DB0AFEF70826060B /* Pods_HomeHealthPro_HomeHealthProUITests.framework */,
+				40F12E604AE2DDEA1BF1B83E /* Pods_HomeHealthProTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA6511079B4E6659A5B14536 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DFCD40C8169038F5326C056 /* Pods-HomeHealthPro.debug.xcconfig */,
+				FDFD8D1457423D4CC81D15D8 /* Pods-HomeHealthPro.release.xcconfig */,
+				0BF5E06937B07DF328D2226A /* Pods-HomeHealthPro-HomeHealthProUITests.debug.xcconfig */,
+				26D1AD8D63055663035E508A /* Pods-HomeHealthPro-HomeHealthProUITests.release.xcconfig */,
+				F23811A5EF20729D9D864CEC /* Pods-HomeHealthProTests.debug.xcconfig */,
+				96A2B3DC9FE5418C2FF311F7 /* Pods-HomeHealthProTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC3674FA2407D1C3006EC471 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC3674FE2407D222006EC471 /* SignUpVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC3674FB2407D1D4006EC471 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC3674FC2407D1DB006EC471 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC3674FD2407D1E1006EC471 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC4B2C992408E09F00C2173B /* DisplayTft */ = {
+			isa = PBXGroup;
+			children = (
+				BC4B2CA02408E0D200C2173B /* SF-Pro-Display-Black.ttf */,
+				BC4B2C9E2408E0D100C2173B /* SF-Pro-Display-BlackItalic.ttf */,
+				BC4B2C9F2408E0D100C2173B /* SF-Pro-Display-Bold.ttf */,
+				BC4B2C9A2408E0D100C2173B /* SF-Pro-Display-Heavy.ttf */,
+				BC4B2C9D2408E0D100C2173B /* SF-Pro-Display-Light.ttf */,
+				BC4B2C9C2408E0D100C2173B /* SF-Pro-Display-Medium.ttf */,
+				BC4B2C9B2408E0D100C2173B /* SF-Pro-Display-Regular.ttf */,
+			);
+			path = DisplayTft;
+			sourceTree = "<group>";
+		};
+		BC4B2CB22409110400C2173B /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				BC4B2CB32409113100C2173B /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		BC5A90D62406983D00682179 = {
 			isa = PBXGroup;
 			children = (
+				BC4B2CB22409110400C2173B /* Alert */,
+				BC4B2C992408E09F00C2173B /* DisplayTft */,
+				BC5A912B2406A8BA00682179 /* Helper */,
+				BC5A91232406992100682179 /* AppDelegate */,
+				BC5A91172406989600682179 /* AgentAndStaff */,
 				BC5A90E12406983D00682179 /* HomeHealthPro */,
 				BC5A90FB2406985300682179 /* HomeHealthProTests */,
 				BC5A91062406985300682179 /* HomeHealthProUITests */,
 				BC5A90E02406983D00682179 /* Products */,
+				BA6511079B4E6659A5B14536 /* Pods */,
+				73A53A3806B1B5D3C5DA7F8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +227,6 @@
 		BC5A90E12406983D00682179 /* HomeHealthPro */ = {
 			isa = PBXGroup;
 			children = (
-				BC5A90E22406983D00682179 /* AppDelegate.swift */,
-				BC5A90E42406983D00682179 /* SceneDelegate.swift */,
-				BC5A90E62406983D00682179 /* ViewController.swift */,
-				BC5A90E82406983D00682179 /* Main.storyboard */,
 				BC5A90EE2406985200682179 /* Assets.xcassets */,
 				BC5A90F02406985200682179 /* LaunchScreen.storyboard */,
 				BC5A90F32406985200682179 /* Info.plist */,
@@ -131,6 +253,137 @@
 			path = HomeHealthProUITests;
 			sourceTree = "<group>";
 		};
+		BC5A91172406989600682179 /* AgentAndStaff */ = {
+			isa = PBXGroup;
+			children = (
+				BC793F7E2407924D00AD2D47 /* UsersModule */,
+			);
+			path = AgentAndStaff;
+			sourceTree = "<group>";
+		};
+		BC5A9118240698AA00682179 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC5A911A240698C300682179 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC5A911B240698CA00682179 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC5A911C240698D200682179 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A912924069D1300682179 /* LoginVc.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC5A91232406992100682179 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A90E22406983D00682179 /* AppDelegate.swift */,
+				BC5A90E42406983D00682179 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		BC5A912B2406A8BA00682179 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A912E2406B63200682179 /* Extension.swift */,
+				BC793F892407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift */,
+				BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */,
+				BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */,
+				BC3675002407DE71006EC471 /* SkyFloatingLabelTextField.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		BC5A91302406B8BE00682179 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A911C240698D200682179 /* Controllers */,
+				BC5A911B240698CA00682179 /* ViewModel */,
+				BC5A911A240698C300682179 /* View */,
+				BC5A9118240698AA00682179 /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BC793F7E2407924D00AD2D47 /* UsersModule */ = {
+			isa = PBXGroup;
+			children = (
+				BC5A912724069CF900682179 /* Login.storyboard */,
+				BC5A91302406B8BE00682179 /* Login */,
+				BC793F7F240799E900AD2D47 /* ForgetPassword */,
+				BC793F8D2407CAA900AD2D47 /* SignUP */,
+			);
+			path = UsersModule;
+			sourceTree = "<group>";
+		};
+		BC793F7F240799E900AD2D47 /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				BC793F8424079A3000AD2D47 /* Controllers */,
+				BC793F8324079A2D00AD2D47 /* ViewModel */,
+				BC793F8224079A2900AD2D47 /* View */,
+				BC793F8024079A0300AD2D47 /* Model */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		BC793F8024079A0300AD2D47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC793F8224079A2900AD2D47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC793F8324079A2D00AD2D47 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC793F8424079A3000AD2D47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC793F8524079A9200AD2D47 /* ForgetPasswordVc.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC793F8D2407CAA900AD2D47 /* SignUP */ = {
+			isa = PBXGroup;
+			children = (
+				BC3674FA2407D1C3006EC471 /* Controllers */,
+				BC3674FD2407D1E1006EC471 /* ViewModel */,
+				BC3674FC2407D1DB006EC471 /* View */,
+				BC3674FB2407D1D4006EC471 /* Model */,
+			);
+			path = SignUP;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +391,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC5A910C2406985300682179 /* Build configuration list for PBXNativeTarget "HomeHealthPro" */;
 			buildPhases = (
+				64C9C99EC3A2A78BFC33A527 /* [CP] Check Pods Manifest.lock */,
 				BC5A90DB2406983D00682179 /* Sources */,
 				BC5A90DC2406983D00682179 /* Frameworks */,
 				BC5A90DD2406983D00682179 /* Resources */,
+				4B00131BF723C91CD8B32D22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +410,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC5A910F2406985300682179 /* Build configuration list for PBXNativeTarget "HomeHealthProTests" */;
 			buildPhases = (
+				368DFAFDC24C4F606B10ECD8 /* [CP] Check Pods Manifest.lock */,
 				BC5A90F42406985300682179 /* Sources */,
 				BC5A90F52406985300682179 /* Frameworks */,
 				BC5A90F62406985300682179 /* Resources */,
@@ -173,9 +429,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC5A91122406985300682179 /* Build configuration list for PBXNativeTarget "HomeHealthProUITests" */;
 			buildPhases = (
+				422C6FE95941B3CF31B812A2 /* [CP] Check Pods Manifest.lock */,
 				BC5A90FF2406985300682179 /* Sources */,
 				BC5A91002406985300682179 /* Frameworks */,
 				BC5A91012406985300682179 /* Resources */,
+				A92424557915C8B4DA2DEF97 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,9 +493,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4B2CA12408E0D200C2173B /* SF-Pro-Display-Heavy.ttf in Resources */,
 				BC5A90F22406985200682179 /* LaunchScreen.storyboard in Resources */,
+				BC4B2CA72408E0D200C2173B /* SF-Pro-Display-Black.ttf in Resources */,
 				BC5A90EF2406985200682179 /* Assets.xcassets in Resources */,
-				BC5A90EA2406983D00682179 /* Main.storyboard in Resources */,
+				BC4B2CA32408E0D200C2173B /* SF-Pro-Display-Medium.ttf in Resources */,
+				BC4B2CA52408E0D200C2173B /* SF-Pro-Display-BlackItalic.ttf in Resources */,
+				BC4B2CA62408E0D200C2173B /* SF-Pro-Display-Bold.ttf in Resources */,
+				BC4B2CA22408E0D200C2173B /* SF-Pro-Display-Regular.ttf in Resources */,
+				BC4B2CA42408E0D200C2173B /* SF-Pro-Display-Light.ttf in Resources */,
+				BC5A912824069CF900682179 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +522,125 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		368DFAFDC24C4F606B10ECD8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomeHealthProTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		422C6FE95941B3CF31B812A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomeHealthPro-HomeHealthProUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B00131BF723C91CD8B32D22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeHealthPro/Pods-HomeHealthPro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeHealthPro/Pods-HomeHealthPro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HomeHealthPro/Pods-HomeHealthPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64C9C99EC3A2A78BFC33A527 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomeHealthPro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A92424557915C8B4DA2DEF97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeHealthPro-HomeHealthProUITests/Pods-HomeHealthPro-HomeHealthProUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HomeHealthPro-HomeHealthProUITests/Pods-HomeHealthPro-HomeHealthProUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HomeHealthPro-HomeHealthProUITests/Pods-HomeHealthPro-HomeHealthProUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC5A90DB2406983D00682179 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC5A90E72406983D00682179 /* ViewController.swift in Sources */,
+				BC5A912F2406B63200682179 /* Extension.swift in Sources */,
+				BC3674FF2407D222006EC471 /* SignUpVC.swift in Sources */,
 				BC5A90E32406983D00682179 /* AppDelegate.swift in Sources */,
+				BC793F8C2407C5D500AD2D47 /* StoryboardIndentifiers.swift in Sources */,
+				BC3675012407DE71006EC471 /* SkyFloatingLabelTextField.swift in Sources */,
+				BC793F8A2407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift in Sources */,
+				BC4B2CB42409113100C2173B /* Alert.swift in Sources */,
 				BC5A90ED2406983D00682179 /* HomeHealthPro.xcdatamodeld in Sources */,
+				BC5A912A24069D1300682179 /* LoginVc.swift in Sources */,
+				BC4B2CB62409132100C2173B /* AppNameIdentifier.swift in Sources */,
+				BC793F8624079A9200AD2D47 /* ForgetPasswordVc.swift in Sources */,
 				BC5A90E52406983D00682179 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,14 +677,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BC5A90E82406983D00682179 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC5A90E92406983D00682179 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BC5A90F02406985200682179 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,6 +804,7 @@
 		};
 		BC5A910D2406985300682179 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DFCD40C8169038F5326C056 /* Pods-HomeHealthPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +822,7 @@
 		};
 		BC5A910E2406985300682179 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDFD8D1457423D4CC81D15D8 /* Pods-HomeHealthPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +840,7 @@
 		};
 		BC5A91102406985300682179 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F23811A5EF20729D9D864CEC /* Pods-HomeHealthProTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +862,7 @@
 		};
 		BC5A91112406985300682179 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96A2B3DC9FE5418C2FF311F7 /* Pods-HomeHealthProTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +884,7 @@
 		};
 		BC5A91132406985300682179 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF5E06937B07DF328D2226A /* Pods-HomeHealthPro-HomeHealthProUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +904,7 @@
 		};
 		BC5A91142406985300682179 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26D1AD8D63055663035E508A /* Pods-HomeHealthPro-HomeHealthProUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
