@@ -20,5 +20,9 @@ class TabBarDashboard: UITabBarController {
 extension TabBarDashboard {
     func initialSetting() {
         tabBarDashbard.addGradientTo(startColor: UIColor.startGradientColor, endColor: UIColor.endGradientColor, isVertical: true)
+        for tabBarItems:UITabBarItem in tabBarDashbard.items! {
+            let attributes = [NSAttributedString.Key.font:UIFont(name: "SFProDisplay-Regular", size: 13)]
+            tabBarItems.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
+        }
     }
 }

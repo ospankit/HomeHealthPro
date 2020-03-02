@@ -26,6 +26,8 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var alreadyHaveAnAccountLabel: UILabel!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var iAcceptLabel: UILabel!
+    var passwordHideShowButton = UIButton(type: .custom)
+    var isSecureTextEntry = true
     
     let dropDown = DropDown()
     
@@ -105,10 +107,32 @@ extension SignUpVC {
         finalString.append(lastMainText)
         iAcceptLabel.attributedText = finalString
         
+        //adding button to passwordtextfield
+        passwordHideShowButton.addTarget(self, action: #selector(hideShowPassword), for: .touchUpInside)
+        passwordHideShowButton.frame(forAlignmentRect: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(30), height: passwordTextField.bounds.height))
+        passwordHideShowButton.setBackgroundImage(UIImage(named: "Invisible"), for: .normal)
+        passwordTextField.rightViewMode = .always
+        passwordTextField.rightView = passwordHideShowButton
+        
+        //hiding data of passordTextfield
+        passwordTextField.isSecureTextEntry = true
+        
+        
         //drop down setting
         dropDown.anchorView = agencyTypeView
         dropDown.dataSource = ["A","B","C","D"]
         dropDown.bottomOffset = CGPoint(x: 0, y: (dropDown.anchorView?.plainView.bounds.height)!)
+    }
+    
+    @objc func hideShowPassword() {
+        if isSecureTextEntry {
+            passwordTextField.isSecureTextEntry = false
+            passwordHideShowButton.setBackgroundImage(UIImage(named: "Visible"), for: .normal)
+        }else {
+            passwordTextField.isSecureTextEntry = true
+            passwordHideShowButton.setBackgroundImage(UIImage(named: "Invisible"), for: .normal)
+        }
+        isSecureTextEntry = !isSecureTextEntry
     }
 }
 

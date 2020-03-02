@@ -4,13 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Clinicians-->
         <scene sceneID="G3a-br-Rfn">
             <objects>
-                <viewController id="rDV-cL-x2h" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CliniciansVC" id="rDV-cL-x2h" customClass="CliniciansVC" customModule="HomeHealthPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fAM-7K-gd5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +36,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="luT-9m-kWY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Group 16" id="fyA-1T-YB8">
+                    <tabBarItem key="tabBarItem" title="" image="TabBar" id="fyA-1T-YB8">
                         <inset key="imageInsets" minX="35" minY="0.0" maxX="35" maxY="32"/>
                     </tabBarItem>
                 </viewController>
@@ -46,7 +47,7 @@
         <!--My Account-->
         <scene sceneID="CoV-9V-G8K">
             <objects>
-                <viewController id="MMI-IS-Odj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyAccountVC" id="MMI-IS-Odj" customClass="MyAccountVC" customModule="HomeHealthPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jIG-Ov-FGs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +65,7 @@
         <!--Settings-->
         <scene sceneID="lHf-yl-kK9">
             <objects>
-                <viewController id="KTa-Zn-buZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsVC" id="KTa-Zn-buZ" customClass="SettingsVC" customModule="HomeHealthPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MY1-Cl-hQE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,17 +87,79 @@
                     <view key="view" contentMode="scaleToFill" id="ghF-Xb-y7T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-aT-qBh">
+                                <rect key="frame" x="0.0" y="275.5" width="414" height="537.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Uz-Ns-Xdd">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DashBoardCollectionViewCell" id="qKv-U6-bce" customClass="DashBoardCollectionViewCell" customModule="HomeHealthPro" customModuleProvider="target">
+                                        <rect key="frame" x="101" y="0.0" width="212" height="217"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="siC-0a-5ST">
+                                            <rect key="frame" x="0.0" y="0.0" width="212" height="217"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNi-S0-bLe">
+                                                    <rect key="frame" x="52" y="54.5" width="108.5" height="108.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="aNi-S0-bLe" secondAttribute="height" multiplier="1:1" id="NA5-zu-nFQ"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEt-N7-lJs">
+                                                    <rect key="frame" x="87.5" y="171" width="37.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aNi-S0-bLe" firstAttribute="centerY" secondItem="siC-0a-5ST" secondAttribute="centerY" id="D0u-2b-gjb"/>
+                                                <constraint firstItem="SEt-N7-lJs" firstAttribute="top" secondItem="aNi-S0-bLe" secondAttribute="bottom" constant="8" id="Dba-bG-ol5"/>
+                                                <constraint firstItem="aNi-S0-bLe" firstAttribute="height" secondItem="siC-0a-5ST" secondAttribute="height" multiplier="0.5" id="MUR-WG-CTU"/>
+                                                <constraint firstItem="SEt-N7-lJs" firstAttribute="centerX" secondItem="aNi-S0-bLe" secondAttribute="centerX" id="SKk-zU-K1R"/>
+                                                <constraint firstItem="aNi-S0-bLe" firstAttribute="centerX" secondItem="siC-0a-5ST" secondAttribute="centerX" id="auq-ho-Lok"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="212" height="217"/>
+                                        <connections>
+                                            <outlet property="dashBoardCountButton" destination="aNi-S0-bLe" id="gOn-JS-sQE"/>
+                                            <outlet property="dashBoardTotalLabel" destination="SEt-N7-lJs" id="MK0-vL-KqY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="fFs-p0-R6u" id="zfB-Mt-KGr"/>
+                                    <outlet property="delegate" destination="fFs-p0-R6u" id="c2Z-58-IVs"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Q5-7C-x41" firstAttribute="trailing" secondItem="9uS-aT-qBh" secondAttribute="trailing" id="Jbc-bG-NTt"/>
+                            <constraint firstItem="9uS-aT-qBh" firstAttribute="leading" secondItem="2Q5-7C-x41" secondAttribute="leading" id="YEW-lA-1IF"/>
+                            <constraint firstItem="9uS-aT-qBh" firstAttribute="height" secondItem="ghF-Xb-y7T" secondAttribute="height" multiplier="0.6" id="ubP-t4-fR2"/>
+                            <constraint firstItem="2Q5-7C-x41" firstAttribute="bottom" secondItem="9uS-aT-qBh" secondAttribute="bottom" id="xD3-KN-cr3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2Q5-7C-x41"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="Dashboard" id="KDt-wm-oKS">
                         <inset key="imageInsets" minX="9" minY="9" maxX="9" maxY="9"/>
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="dashBooardCollectionView" destination="9uS-aT-qBh" id="msh-3u-AZb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoT-40-MKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-743" y="810"/>
+            <point key="canvasLocation" x="-743.47826086956525" y="809.59821428571422"/>
         </scene>
         <!--Tab Bar Dashboard-->
         <scene sceneID="RKQ-mL-5dK">
@@ -132,8 +195,8 @@
     <resources>
         <image name="Clinicians" width="31" height="40"/>
         <image name="Dashboard" width="40" height="40"/>
-        <image name="Group 16" width="140" height="143.5"/>
         <image name="My Account" width="40" height="40"/>
         <image name="Settings" width="40" height="40"/>
+        <image name="TabBar" width="140" height="143.5"/>
     </resources>
 </document>

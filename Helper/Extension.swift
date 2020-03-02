@@ -14,10 +14,20 @@ public class Extension : NSObject {
 }
 
 extension UIView {
-    public func makeCornerRadius(raidus: CGFloat){
+    func makeCornerRadius(raidus: CGFloat){
         DispatchQueue.main.async {
             self.layer.masksToBounds = true
             self.layer.cornerRadius = raidus
+            
+            self.layoutIfNeeded()
+        }
+    }
+    
+    func makeTopCornerRadius(raidus: CGFloat){
+        DispatchQueue.main.async {
+            self.layer.masksToBounds = true
+            self.layer.cornerRadius = raidus
+            self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
             self.layoutIfNeeded()
         }
     }
@@ -40,6 +50,14 @@ extension UIView {
         DispatchQueue.main.async {
             self.layer.borderWidth = width
             self.layer.borderColor = UIColor.lightGray.cgColor
+            self.layoutIfNeeded()
+        }
+    }
+    
+    func addBorderWithBackGroundGrey(width: CGFloat){
+        DispatchQueue.main.async {
+            self.layer.borderWidth = width
+            self.layer.borderColor = UIColor.bagroundGrey.cgColor
             self.layoutIfNeeded()
         }
     }

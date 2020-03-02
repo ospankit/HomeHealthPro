@@ -14,6 +14,9 @@ enum Controller {
     case SignUpVC
     case DashboardVC
     case tabBarDashboard
+    case SettingsVC
+    case MyAccountVC
+    case CliniciansVC
 }
 
 extension Controller {
@@ -24,6 +27,9 @@ extension Controller {
         case .SignUpVC: return "SignUpVC"
         case .DashboardVC: return "DashboardVC"
         case .tabBarDashboard: return "TabBarDashboard"
+        case .SettingsVC: return "SettingsVC"
+        case .MyAccountVC: return "MyAccountVC"
+        case .CliniciansVC: return "CliniciansVC"
         }
     }
 }
