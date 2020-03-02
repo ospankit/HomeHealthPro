@@ -54,10 +54,10 @@ extension UIView {
         }
     }
     
-    func addBorderWithBackGroundGrey(width: CGFloat){
+    func addBorderWithCircleColor(width: CGFloat){
         DispatchQueue.main.async {
             self.layer.borderWidth = width
-            self.layer.borderColor = UIColor.bagroundGrey.cgColor
+            self.layer.borderColor = UIColor.circleColor.cgColor
             self.layoutIfNeeded()
         }
     }
@@ -116,6 +116,19 @@ extension UIColor {
             return UIColor(red: 90.0/255.0, green: 95.0/255.0, blue: 109.0/255.0, alpha: 1.0)
         }
     }
+    
+    class var lineSeperator:UIColor {
+        get {
+            return UIColor(red: 240.0/255.0, green: 242.0/255.0, blue: 249.0/255.0, alpha: 1.0)
+        }
+    }
+    
+    class var circleColor:UIColor {
+        get {
+            return UIColor(red: 226/255.0, green: 228/255.0, blue: 241/255.0, alpha: 1.0)
+        }
+    }
+    
 }
 
 extension UITextField {

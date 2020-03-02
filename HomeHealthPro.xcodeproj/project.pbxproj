@@ -40,6 +40,9 @@
 		BCAC0B49240D0488000A1720 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B48240D0488000A1720 /* SettingsVC.swift */; };
 		BCAC0B4B240D049B000A1720 /* MyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B4A240D049B000A1720 /* MyAccountVC.swift */; };
 		BCAC0B4F240D111B000A1720 /* DashBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B4E240D111B000A1720 /* DashBoardCollectionViewCell.swift */; };
+		BCAC0B56240D445A000A1720 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B55240D445A000A1720 /* SlideInTransition.swift */; };
+		BCAC0B58240D44ED000A1720 /* DashBoardSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B57240D44ED000A1720 /* DashBoardSideMenuVC.swift */; };
+		BCAC0B5C240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B5B240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift */; };
 		D887E2352C7CA634E904F2B2 /* Pods_HomeHealthPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B6D23857AE9DCF26410A58 /* Pods_HomeHealthPro.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +107,9 @@
 		BCAC0B48240D0488000A1720 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		BCAC0B4A240D049B000A1720 /* MyAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountVC.swift; sourceTree = "<group>"; };
 		BCAC0B4E240D111B000A1720 /* DashBoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		BCAC0B55240D445A000A1720 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		BCAC0B57240D44ED000A1720 /* DashBoardSideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardSideMenuVC.swift; sourceTree = "<group>"; };
+		BCAC0B5B240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardSideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		D56D1528DB0AFEF70826060B /* Pods_HomeHealthPro_HomeHealthProUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeHealthPro_HomeHealthProUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23811A5EF20729D9D864CEC /* Pods-HomeHealthProTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeHealthProTests.debug.xcconfig"; path = "Target Support Files/Pods-HomeHealthProTests/Pods-HomeHealthProTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDFD8D1457423D4CC81D15D8 /* Pods-HomeHealthPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeHealthPro.release.xcconfig"; path = "Target Support Files/Pods-HomeHealthPro/Pods-HomeHealthPro.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				BC4B2CBD2409213B00C2173B /* Dashboard.storyboard */,
+				BCAC0B50240D41B6000A1720 /* DashBoardSideMenu */,
 				BCAC0B38240D037D000A1720 /* My Account */,
 				BCAC0B37240D0372000A1720 /* Settings */,
 				BCAC0B36240D0342000A1720 /* Clinicians */,
@@ -376,6 +383,7 @@
 				BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */,
 				BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */,
 				BC3675002407DE71006EC471 /* SkyFloatingLabelTextField.swift */,
+				BCAC0B55240D445A000A1720 /* SlideInTransition.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -571,6 +579,47 @@
 				BCAC0B45240D046A000A1720 /* CliniciansVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BCAC0B50240D41B6000A1720 /* DashBoardSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0B54240D4202000A1720 /* Controller */,
+				BCAC0B53240D41E9000A1720 /* ViewModel */,
+				BCAC0B52240D41DE000A1720 /* View */,
+				BCAC0B51240D41D8000A1720 /* Model */,
+			);
+			path = DashBoardSideMenu;
+			sourceTree = "<group>";
+		};
+		BCAC0B51240D41D8000A1720 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BCAC0B52240D41DE000A1720 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BCAC0B53240D41E9000A1720 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BCAC0B54240D4202000A1720 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BCAC0B57240D44ED000A1720 /* DashBoardSideMenuVC.swift */,
+				BCAC0B5B240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -827,15 +876,18 @@
 				BC793F8C2407C5D500AD2D47 /* StoryboardIndentifiers.swift in Sources */,
 				BCAC0B4B240D049B000A1720 /* MyAccountVC.swift in Sources */,
 				BCAC0B49240D0488000A1720 /* SettingsVC.swift in Sources */,
+				BCAC0B58240D44ED000A1720 /* DashBoardSideMenuVC.swift in Sources */,
 				BC3675012407DE71006EC471 /* SkyFloatingLabelTextField.swift in Sources */,
 				BC793F8A2407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift in Sources */,
 				BC4B2CB42409113100C2173B /* Alert.swift in Sources */,
 				BC5A90ED2406983D00682179 /* HomeHealthPro.xcdatamodeld in Sources */,
 				BC5A912A24069D1300682179 /* LoginVc.swift in Sources */,
 				BC4B2CC424093C5900C2173B /* TabBarDashboard.swift in Sources */,
+				BCAC0B56240D445A000A1720 /* SlideInTransition.swift in Sources */,
 				BCAC0B46240D046B000A1720 /* CliniciansVC.swift in Sources */,
 				BC4B2CB62409132100C2173B /* AppNameIdentifier.swift in Sources */,
 				BC793F8624079A9200AD2D47 /* ForgetPasswordVc.swift in Sources */,
+				BCAC0B5C240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift in Sources */,
 				BC5A90E52406983D00682179 /* SceneDelegate.swift in Sources */,
 				BCAC0B4F240D111B000A1720 /* DashBoardCollectionViewCell.swift in Sources */,
 			);
