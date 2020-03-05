@@ -62,6 +62,13 @@ extension UIView {
         }
     }
     
+    func dropShadow() {
+        self.layer.masksToBounds = false
+        self.layer.shadowRadius = 1
+        self.layer.shadowOpacity = 0.2
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0 , height:3)
+    }
 }
 
 extension UIButton {

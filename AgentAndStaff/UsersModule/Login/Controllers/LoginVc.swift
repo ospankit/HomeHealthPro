@@ -30,12 +30,14 @@ class LoginVc: UIViewController {
     
     @IBAction func forgetPasswordAction(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(identifier: Controller.ForgetPasswordVc.identifier) as! ForgetPasswordVc
-        navigationController?.pushViewController(vc, animated: false)
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false, completion: nil)
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(identifier: Controller.SignUpVC.identifier) as! SignUpVC
-        navigationController?.pushViewController(vc, animated: false)
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false, completion: nil)
     }
     
     @IBAction func signInAction(_ sender: UIButton) {
@@ -47,8 +49,9 @@ class LoginVc: UIViewController {
             Alert().alertOkView(viewController:self,message:ReuseAbleIdentifier.enterPassword.identifier)
             return
         }
-        let vc = UIStoryboard.init(name: StoryBoard.Dashboard.indentifier, bundle: nil).instantiateViewController(identifier: Controller.tabBarDashboard.identifier) as! TabBarDashboard
-            navigationController?.pushViewController(vc, animated: false)
+        let vc = UIStoryboard.init(name: StoryBoard.Dashboard.indentifier, bundle: nil).instantiateViewController(identifier: Controller.MainContainerController.identifier) as! MainContainerController
+        UIApplication.shared.windows.first?.rootViewController = vc
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }
 

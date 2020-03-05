@@ -36,6 +36,7 @@ class SignUpVC: UIViewController {
         initialSettingOfSignUpVC()
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func agencyTypeAction(_ sender: Any) {
         dropDown.show()
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
@@ -45,10 +46,8 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func signInAction(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+        dismiss(animated: false, completion: nil)
     }
-    
-    
 }
 
 extension SignUpVC {
@@ -97,10 +96,10 @@ extension SignUpVC {
         
         //middle color change for
         let attributes = [NSAttributedString.Key.foregroundColor : UIColor.colorPrimary]
-        let attributedString = NSAttributedString(string: "terms and conditions ", attributes: attributes)
+        let attributedString = NSAttributedString(string: Constant.termsAndCondition.identifier, attributes: attributes)
         let simplesttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
-        let mainText = NSAttributedString(string: "I accept all the ", attributes: simplesttributes)
-        let lastMainText = NSAttributedString(string: "to access this application", attributes: simplesttributes)
+        let mainText = NSAttributedString(string: Constant.iAcceptAllThe.identifier, attributes: simplesttributes)
+        let lastMainText = NSAttributedString(string: Constant.toAccessThisApplication.identifier , attributes: simplesttributes)
         let finalString = NSMutableAttributedString()
         finalString.append(mainText)
         finalString.append(attributedString)
@@ -110,7 +109,7 @@ extension SignUpVC {
         //adding button to passwordtextfield
         passwordHideShowButton.addTarget(self, action: #selector(hideShowPassword), for: .touchUpInside)
         passwordHideShowButton.frame(forAlignmentRect: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(30), height: passwordTextField.bounds.height))
-        passwordHideShowButton.setBackgroundImage(UIImage(named: "Invisible"), for: .normal)
+        passwordHideShowButton.setBackgroundImage(UIImage(named: Constant.Invisible.identifier), for: .normal)
         passwordTextField.rightViewMode = .always
         passwordTextField.rightView = passwordHideShowButton
         
@@ -127,10 +126,10 @@ extension SignUpVC {
     @objc func hideShowPassword() {
         if isSecureTextEntry {
             passwordTextField.isSecureTextEntry = false
-            passwordHideShowButton.setBackgroundImage(UIImage(named: "Visible"), for: .normal)
+            passwordHideShowButton.setBackgroundImage(UIImage(named: Constant.Visible.identifier), for: .normal)
         }else {
             passwordTextField.isSecureTextEntry = true
-            passwordHideShowButton.setBackgroundImage(UIImage(named: "Invisible"), for: .normal)
+            passwordHideShowButton.setBackgroundImage(UIImage(named: Constant.Invisible.identifier), for: .normal)
         }
         isSecureTextEntry = !isSecureTextEntry
     }

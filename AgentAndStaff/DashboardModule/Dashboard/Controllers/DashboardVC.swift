@@ -14,22 +14,11 @@ class DashboardVC: UIViewController {
     @IBOutlet weak var addBalanceButton: UIButton!
     @IBOutlet weak var dashBoardUpperView: UIView!
     @IBOutlet weak var dashBooardCollectionView: UICollectionView!
-    let transition = SlideInTransition()
+    let transition = CATransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSettingoOfDashboardVc()
-    }
-    
-    //mark: dashBoard menu action
-    @IBAction func dashBoardMenuAction(_ sender: Any) {
-        let dashBoardSideMenu = storyboard?.instantiateViewController(identifier: Controller.DashBoardSideMenuVC.identifier) as! DashBoardSideMenuVC
-        /*menuViewController.didTapMenuType = { MenuType in
-            self.pushMenuTapToView(menuType: MenuType)
-        }*/
-        dashBoardSideMenu.modalPresentationStyle = .overCurrentContext
-        dashBoardSideMenu.transitioningDelegate = self
-        present(dashBoardSideMenu, animated: true)
     }
 }
 
@@ -76,17 +65,5 @@ extension DashboardVC: UICollectionViewDelegate,UICollectionViewDataSource,UICol
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.5
-    }
-}
-
-extension DashboardVC: UIViewControllerTransitioningDelegate {
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = true
-        return transition
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = false
-        return transition
     }
 }

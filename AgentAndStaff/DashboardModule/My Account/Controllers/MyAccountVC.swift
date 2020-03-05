@@ -18,5 +18,7 @@ class MyAccountVC: UIViewController {
 
 extension MyAccountVC {
     func initialSettingoOfMyAccountVC(){
+        //hiding navigation controller
+        //navigationController?.isNavigationBarHidden = true
     }
 }

@@ -22,7 +22,7 @@ class ForgetPasswordVc: UIViewController {
     }
     
     @IBAction func backToLoginViewAction(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+        dismiss(animated: false, completion: nil)
     }
     
     @IBAction func resetPasswordAction(_ sender: UIButton) {

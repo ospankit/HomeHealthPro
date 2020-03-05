@@ -33,6 +33,9 @@
 		BC5A912824069CF900682179 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A912724069CF900682179 /* Login.storyboard */; };
 		BC5A912A24069D1300682179 /* LoginVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A912924069D1300682179 /* LoginVc.swift */; };
 		BC5A912F2406B63200682179 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A912E2406B63200682179 /* Extension.swift */; };
+		BC6DE49E240F8BCC00BE7A6D /* DashBoardNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE49D240F8BCC00BE7A6D /* DashBoardNavigation.swift */; };
+		BC6DE4A0240FA16300BE7A6D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE49F240FA16300BE7A6D /* Constant.swift */; };
+		BC6DE4AC240FF00900BE7A6D /* MainContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE4AB240FF00900BE7A6D /* MainContainerController.swift */; };
 		BC793F8624079A9200AD2D47 /* ForgetPasswordVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793F8524079A9200AD2D47 /* ForgetPasswordVc.swift */; };
 		BC793F8A2407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793F892407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift */; };
 		BC793F8C2407C5D500AD2D47 /* StoryboardIndentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */; };
@@ -40,7 +43,6 @@
 		BCAC0B49240D0488000A1720 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B48240D0488000A1720 /* SettingsVC.swift */; };
 		BCAC0B4B240D049B000A1720 /* MyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B4A240D049B000A1720 /* MyAccountVC.swift */; };
 		BCAC0B4F240D111B000A1720 /* DashBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B4E240D111B000A1720 /* DashBoardCollectionViewCell.swift */; };
-		BCAC0B56240D445A000A1720 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B55240D445A000A1720 /* SlideInTransition.swift */; };
 		BCAC0B58240D44ED000A1720 /* DashBoardSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B57240D44ED000A1720 /* DashBoardSideMenuVC.swift */; };
 		BCAC0B5C240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B5B240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift */; };
 		D887E2352C7CA634E904F2B2 /* Pods_HomeHealthPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B6D23857AE9DCF26410A58 /* Pods_HomeHealthPro.framework */; };
@@ -100,6 +102,9 @@
 		BC5A912724069CF900682179 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC5A912924069D1300682179 /* LoginVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVc.swift; sourceTree = "<group>"; };
 		BC5A912E2406B63200682179 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		BC6DE49D240F8BCC00BE7A6D /* DashBoardNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardNavigation.swift; sourceTree = "<group>"; };
+		BC6DE49F240FA16300BE7A6D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		BC6DE4AB240FF00900BE7A6D /* MainContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerController.swift; sourceTree = "<group>"; };
 		BC793F8524079A9200AD2D47 /* ForgetPasswordVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVc.swift; sourceTree = "<group>"; };
 		BC793F892407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewcontrollerIndentifiers.swift; sourceTree = "<group>"; };
 		BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIndentifiers.swift; sourceTree = "<group>"; };
@@ -107,7 +112,6 @@
 		BCAC0B48240D0488000A1720 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		BCAC0B4A240D049B000A1720 /* MyAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountVC.swift; sourceTree = "<group>"; };
 		BCAC0B4E240D111B000A1720 /* DashBoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardCollectionViewCell.swift; sourceTree = "<group>"; };
-		BCAC0B55240D445A000A1720 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		BCAC0B57240D44ED000A1720 /* DashBoardSideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardSideMenuVC.swift; sourceTree = "<group>"; };
 		BCAC0B5B240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardSideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		D56D1528DB0AFEF70826060B /* Pods_HomeHealthPro_HomeHealthProUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeHealthPro_HomeHealthProUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				BC4B2CBD2409213B00C2173B /* Dashboard.storyboard */,
+				BC6DE4A6240FA4A300BE7A6D /* DashboardNavigation */,
+				BC6DE4A1240FA42E00BE7A6D /* DashboardTabBar */,
 				BCAC0B50240D41B6000A1720 /* DashBoardSideMenu */,
 				BCAC0B38240D037D000A1720 /* My Account */,
 				BCAC0B37240D0372000A1720 /* Settings */,
@@ -266,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				BC4B2CBF240929DF00C2173B /* DashboardVC.swift */,
-				BC4B2CC324093C5900C2173B /* TabBarDashboard.swift */,
 				BCAC0B4E240D111B000A1720 /* DashBoardCollectionViewCell.swift */,
 			);
 			path = Controllers;
@@ -275,6 +280,7 @@
 		BC5A90D62406983D00682179 = {
 			isa = PBXGroup;
 			children = (
+				BC6DE4AB240FF00900BE7A6D /* MainContainerController.swift */,
 				BC4B2CB22409110400C2173B /* Alert */,
 				BC4B2C992408E09F00C2173B /* DisplayTft */,
 				BC5A912B2406A8BA00682179 /* Helper */,
@@ -383,7 +389,7 @@
 				BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */,
 				BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */,
 				BC3675002407DE71006EC471 /* SkyFloatingLabelTextField.swift */,
-				BCAC0B55240D445A000A1720 /* SlideInTransition.swift */,
+				BC6DE49F240FA16300BE7A6D /* Constant.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -397,6 +403,86 @@
 				BC5A9118240698AA00682179 /* Model */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		BC6DE4A1240FA42E00BE7A6D /* DashboardTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BC6DE4A5240FA46300BE7A6D /* Controller */,
+				BC6DE4A4240FA45900BE7A6D /* ViewModel */,
+				BC6DE4A3240FA45300BE7A6D /* View */,
+				BC6DE4A2240FA44B00BE7A6D /* Model */,
+			);
+			path = DashboardTabBar;
+			sourceTree = "<group>";
+		};
+		BC6DE4A2240FA44B00BE7A6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC6DE4A3240FA45300BE7A6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC6DE4A4240FA45900BE7A6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC6DE4A5240FA46300BE7A6D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC4B2CC324093C5900C2173B /* TabBarDashboard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC6DE4A6240FA4A300BE7A6D /* DashboardNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				BC6DE4AA240FA4EA00BE7A6D /* Controller */,
+				BC6DE4A9240FA4DD00BE7A6D /* ViewModel */,
+				BC6DE4A8240FA4D100BE7A6D /* View */,
+				BC6DE4A7240FA4C600BE7A6D /* Model */,
+			);
+			path = DashboardNavigation;
+			sourceTree = "<group>";
+		};
+		BC6DE4A7240FA4C600BE7A6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC6DE4A8240FA4D100BE7A6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC6DE4A9240FA4DD00BE7A6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC6DE4AA240FA4EA00BE7A6D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC6DE49D240F8BCC00BE7A6D /* DashBoardNavigation.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		BC793F7E2407924D00AD2D47 /* UsersModule */ = {
@@ -881,13 +967,15 @@
 				BC793F8A2407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift in Sources */,
 				BC4B2CB42409113100C2173B /* Alert.swift in Sources */,
 				BC5A90ED2406983D00682179 /* HomeHealthPro.xcdatamodeld in Sources */,
+				BC6DE4AC240FF00900BE7A6D /* MainContainerController.swift in Sources */,
 				BC5A912A24069D1300682179 /* LoginVc.swift in Sources */,
+				BC6DE49E240F8BCC00BE7A6D /* DashBoardNavigation.swift in Sources */,
 				BC4B2CC424093C5900C2173B /* TabBarDashboard.swift in Sources */,
-				BCAC0B56240D445A000A1720 /* SlideInTransition.swift in Sources */,
 				BCAC0B46240D046B000A1720 /* CliniciansVC.swift in Sources */,
 				BC4B2CB62409132100C2173B /* AppNameIdentifier.swift in Sources */,
 				BC793F8624079A9200AD2D47 /* ForgetPasswordVc.swift in Sources */,
 				BCAC0B5C240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift in Sources */,
+				BC6DE4A0240FA16300BE7A6D /* Constant.swift in Sources */,
 				BC5A90E52406983D00682179 /* SceneDelegate.swift in Sources */,
 				BCAC0B4F240D111B000A1720 /* DashBoardCollectionViewCell.swift in Sources */,
 			);
