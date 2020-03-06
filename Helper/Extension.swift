@@ -16,7 +16,7 @@ public class Extension : NSObject {
 extension UIView {
     func makeCornerRadius(raidus: CGFloat){
         DispatchQueue.main.async {
-            self.layer.masksToBounds = true
+            //self.layer.masksToBounds = true
             self.layer.cornerRadius = raidus
             
             self.layoutIfNeeded()
@@ -69,6 +69,18 @@ extension UIView {
         self.layer.shadowColor = UIColor.lightGray.cgColor
         self.layer.shadowOffset = CGSize(width: 0 , height:3)
     }
+    
+    func dropShadowAllSide(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
+      layer.masksToBounds = false
+      layer.shadowColor = color.cgColor
+      layer.shadowOpacity = opacity
+      layer.shadowOffset = offSet
+      layer.shadowRadius = radius
+
+      layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+      layer.shouldRasterize = true
+      layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
 }
 
 extension UIButton {
@@ -84,6 +96,26 @@ extension UIButton {
         }
         
         layer.insertSublayer(gradient, at: 0)
+    }
+    
+    func addBorderWithGraigent(startColor colorOne: UIColor, endColor colorTwo: UIColor){
+        DispatchQueue.main.async {
+            self.layer.cornerRadius = self.frame.height/2
+            self.clipsToBounds = true
+            
+            let gradient = CAGradientLayer()
+            gradient.frame =  CGRect(origin: CGPoint.zero, size: self.frame.size)
+            gradient.colors = [colorOne.cgColor, colorTwo.cgColor]
+
+            let shape = CAShapeLayer()
+            shape.lineWidth = 2
+            shape.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius).cgPath
+            shape.strokeColor = UIColor.black.cgColor
+            shape.fillColor = UIColor.clear.cgColor
+            gradient.mask = shape
+
+            self.layer.addSublayer(gradient)
+        }
     }
 }
 

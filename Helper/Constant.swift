@@ -38,12 +38,14 @@ extension Constant {
 
 enum fontConstant {
     case SFProDisplayRegular
+    case SFProDisplayBold
 }
 
 extension fontConstant {
     var identifier:String {
         switch self {
         case .SFProDisplayRegular: return "SFProDisplay-Regular"
+        case .SFProDisplayBold: return "SFProDisplay-Bold"
         }
     }
 }

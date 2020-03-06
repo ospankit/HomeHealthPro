@@ -46,12 +46,7 @@ extension DashboardVC: UICollectionViewDelegate,UICollectionViewDataSource,UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Controller.DashBoardCollectionViewCell.identifier, for: indexPath) as! DashBoardCollectionViewCell
-        cell.dashBoardCountButton.addBorderWithCircleColor(width: 2)
-        cell.dashBoardCountButton.makeCornerRadius(raidus: collectionView.frame.size.width/6)
-        cell.dashBoardCountButton.isUserInteractionEnabled = false
-        cell.tintColor = UIColor.colorPrimary
-        cell.backgroundColor = UIColor.white
-        cell.dashBoardTotalLabel.textColor = UIColor.colorPrimaryDark
+        cell.dashboardCollectionViewInitialSetting()
         return cell
     }
     

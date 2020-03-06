@@ -21,6 +21,7 @@ enum Controller {
     case DashBoardSideMenuTableViewCell
     case DashBoardSideMenuVC
     case MainContainerController
+    case ClinicianCollectionCell
 }
 
 extension Controller {
@@ -38,6 +39,7 @@ extension Controller {
         case .DashBoardSideMenuTableViewCell: return "DashBoardSideMenuTableViewCell"
         case .DashBoardSideMenuVC: return "DashBoardSideMenuVC"
         case .MainContainerController: return "MainContainerController"
+        case .ClinicianCollectionCell: return "ClinicianCollectionCell"
         }
     }
 }

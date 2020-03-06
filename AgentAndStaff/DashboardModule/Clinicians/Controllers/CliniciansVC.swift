@@ -34,8 +34,17 @@ extension CliniciansVC {
         clinicianSearchBar.makeCornerRadius(raidus: clinicianSearchBar.frame.size.height/2)
         clinicianSearchBar.font = UIFont(name: fontConstant.SFProDisplayRegular.identifier, size: 20)
         
+        //adding corner radius to view
+        let radiusView = totalClinicianView.frame.size.height/10
+        totalClinicianView.makeCornerRadius(raidus: radiusView)
+        activeClinicianView.makeCornerRadius(raidus: radiusView)
+        inactiveClinicianView.makeCornerRadius(raidus: radiusView)
+        
         //adding view shadow
         clinicianSearchView.dropShadow()
+        totalClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: -1, height: 1))
+        activeClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: -1, height: 1))
+        inactiveClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: -1, height: 1))
         
         //search adding to cliniciansearch bar
         let searchImage = UIImageView(frame: CGRect(x: 10, y: 5, width: 20, height: 20))
@@ -50,26 +59,55 @@ extension CliniciansVC {
         clinicianCollectionView.backgroundColor = .bagroundGrey
         
         //setting color to Clinian stack Label
-        let attributeColorBlack = [NSAttributedString.Key.foregroundColor : UIColor.black]
-        let attributeColorRed = [NSAttributedString.Key.foregroundColor : UIColor.systemRed]
-        let attributeColorGreen = [NSAttributedString.Key.foregroundColor : UIColor.systemGreen]
-        let totalClinicianString = NSAttributedString(string: Constant.TotalClinicians.identifier, attributes: attributeColorBlack)
-        let activeClinicianString = NSAttributedString(string: Constant.ActiveClinicians.identifier, attributes: attributeColorBlack)
-        let inActiveClinicianString = NSAttributedString(string: Constant.InactiveClicians.identifier, attributes: attributeColorBlack)
-        let noOfActiveClinician = NSAttributedString(string: "100", attributes: attributeColorGreen)
-        let noOfClinician = NSAttributedString(string: "100", attributes: attributeColorBlack)
-        let noOfInActiveClinician = NSAttributedString(string: "100", attributes: attributeColorRed)
-        var finalTotalClinianString = NSMutableAttributedString()
+        let attributeColorBlackRegular = [NSAttributedString.Key.foregroundColor : UIColor.black, NSAttributedString.Key.font: UIFont(name: fontConstant.SFProDisplayRegular.identifier, size: 11)]
+        let attributeColorBlackBold = [NSAttributedString.Key.foregroundColor : UIColor.black, NSAttributedString.Key.font: UIFont(name: fontConstant.SFProDisplayBold.identifier, size: 11)]
+        let attributeColorRedBold = [NSAttributedString.Key.foregroundColor : UIColor.systemRed, NSAttributedString.Key.font: UIFont(name: fontConstant.SFProDisplayBold.identifier, size: 11)]
+        let attributeColorGreenBold = [NSAttributedString.Key.foregroundColor: UIColor.systemGreen, NSAttributedString.Key.font: UIFont(name: fontConstant.SFProDisplayBold.identifier, size: 11)]
+        //attributeColorGreenBold[NSAttributedString.Key.foregroundColor] = UIColor.systemGreen
+        //attributeColorGreenBold[NSAttributedString.Key.font] = UIFont(name: fontConstant.SFProDisplayBold.identifier, size: 17)
+        let totalClinicianString = NSAttributedString(string: Constant.TotalClinicians.identifier, attributes: attributeColorBlackRegular)
+        let activeClinicianString = NSAttributedString(string: Constant.ActiveClinicians.identifier, attributes: attributeColorBlackRegular)
+        let inActiveClinicianString = NSAttributedString(string: Constant.InactiveClicians.identifier, attributes: attributeColorBlackRegular)
+        let noOfActiveClinician = NSAttributedString(string: "100", attributes: attributeColorGreenBold)
+        let noOfClinician = NSAttributedString(string: "100", attributes: attributeColorBlackBold)
+        let noOfInActiveClinician = NSAttributedString(string: "100", attributes: attributeColorRedBold)
+        let finalTotalClinianString = NSMutableAttributedString()
         finalTotalClinianString.append(noOfClinician)
         finalTotalClinianString.append(totalClinicianString)
-        var finalActiveClinianString = NSMutableAttributedString()
+        let finalActiveClinianString = NSMutableAttributedString()
         finalActiveClinianString.append(noOfActiveClinician)
         finalActiveClinianString.append(activeClinicianString)
-        var finalInActiveClinianString = NSMutableAttributedString()
+        let finalInActiveClinianString = NSMutableAttributedString()
         finalInActiveClinianString.append(noOfInActiveClinician)
         finalInActiveClinianString.append(inActiveClinicianString)
         totalCliniciansLabel.attributedText = finalTotalClinianString
         inactiveCliniciansLabel.attributedText = finalInActiveClinianString
         activeCliniciansLabel.attributedText = finalActiveClinianString
+    }
+}
+
+extension CliniciansVC: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Controller.ClinicianCollectionCell.identifier, for: indexPath) as! ClinicianCollectionCell
+        cell.makeCornerRadius(raidus: collectionView.frame.size.height/40)
+        //cell.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: 0, height: -1))
+        cell.initalSetting()
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (collectionView.frame.size.width/2)-4, height: (collectionView.frame.size.height/2)-8)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
     }
 }

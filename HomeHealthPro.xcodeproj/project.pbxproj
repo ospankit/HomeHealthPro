@@ -33,6 +33,7 @@
 		BC5A912824069CF900682179 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5A912724069CF900682179 /* Login.storyboard */; };
 		BC5A912A24069D1300682179 /* LoginVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A912924069D1300682179 /* LoginVc.swift */; };
 		BC5A912F2406B63200682179 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A912E2406B63200682179 /* Extension.swift */; };
+		BC6420D624124E5E00053447 /* ClinicianCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6420D524124E5E00053447 /* ClinicianCollectionCell.swift */; };
 		BC6DE49E240F8BCC00BE7A6D /* DashBoardNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE49D240F8BCC00BE7A6D /* DashBoardNavigation.swift */; };
 		BC6DE4A0240FA16300BE7A6D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE49F240FA16300BE7A6D /* Constant.swift */; };
 		BC6DE4AC240FF00900BE7A6D /* MainContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE4AB240FF00900BE7A6D /* MainContainerController.swift */; };
@@ -102,6 +103,7 @@
 		BC5A912724069CF900682179 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BC5A912924069D1300682179 /* LoginVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVc.swift; sourceTree = "<group>"; };
 		BC5A912E2406B63200682179 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		BC6420D524124E5E00053447 /* ClinicianCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicianCollectionCell.swift; sourceTree = "<group>"; };
 		BC6DE49D240F8BCC00BE7A6D /* DashBoardNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardNavigation.swift; sourceTree = "<group>"; };
 		BC6DE49F240FA16300BE7A6D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BC6DE4AB240FF00900BE7A6D /* MainContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerController.swift; sourceTree = "<group>"; };
@@ -663,6 +665,7 @@
 			isa = PBXGroup;
 			children = (
 				BCAC0B45240D046A000A1720 /* CliniciansVC.swift */,
+				BC6420D524124E5E00053447 /* ClinicianCollectionCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -726,6 +729,8 @@
 			dependencies = (
 			);
 			name = HomeHealthPro;
+			packageProductDependencies = (
+			);
 			productName = HomeHealthPro;
 			productReference = BC5A90DF2406983D00682179 /* HomeHealthPro.app */;
 			productType = "com.apple.product-type.application";
@@ -801,6 +806,8 @@
 				Base,
 			);
 			mainGroup = BC5A90D62406983D00682179;
+			packageReferences = (
+			);
 			productRefGroup = BC5A90E02406983D00682179 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -961,6 +968,7 @@
 				BC5A90E32406983D00682179 /* AppDelegate.swift in Sources */,
 				BC793F8C2407C5D500AD2D47 /* StoryboardIndentifiers.swift in Sources */,
 				BCAC0B4B240D049B000A1720 /* MyAccountVC.swift in Sources */,
+				BC6420D624124E5E00053447 /* ClinicianCollectionCell.swift in Sources */,
 				BCAC0B49240D0488000A1720 /* SettingsVC.swift in Sources */,
 				BCAC0B58240D44ED000A1720 /* DashBoardSideMenuVC.swift in Sources */,
 				BC3675012407DE71006EC471 /* SkyFloatingLabelTextField.swift in Sources */,

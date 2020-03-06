@@ -18,5 +18,6 @@ target 'HomeHealthPro' do
 
   pod 'DropDown'
   pod 'IQKeyboardManager'
+  pod 'Cosmos'
 
 end
