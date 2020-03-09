@@ -42,9 +42,9 @@ extension CliniciansVC {
         
         //adding view shadow
         clinicianSearchView.dropShadow()
-        totalClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: -1, height: 1))
-        activeClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: -1, height: 1))
-        inactiveClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: -1, height: 1))
+        totalClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: 1, height: 1))
+        activeClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: 1, height: 1))
+        inactiveClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: 1, height: 1))
         
         //search adding to cliniciansearch bar
         let searchImage = UIImageView(frame: CGRect(x: 10, y: 5, width: 20, height: 20))
@@ -94,7 +94,7 @@ extension CliniciansVC: UICollectionViewDelegate,UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Controller.ClinicianCollectionCell.identifier, for: indexPath) as! ClinicianCollectionCell
         cell.makeCornerRadius(raidus: collectionView.frame.size.height/40)
-        //cell.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: 0, height: -1))
+        //cell.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: 0.5, height: 1))
         cell.initalSetting()
         return cell
     }

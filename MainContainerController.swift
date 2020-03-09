@@ -83,6 +83,14 @@ class MainContainerController: UIViewController {
 }
 
 extension MainContainerController: hideMenuButtonProtocol{
+    func unhideMenuButton() {
+        menuButton.isHidden = false
+    }
+    
+    func hideMenuButton() {
+        menuButton.isHidden = true
+    }
+    
     func hideMenuButton(title: String) {
         if title == imageConstant.Dashboard.identifier {
             menuButton.isHidden = false

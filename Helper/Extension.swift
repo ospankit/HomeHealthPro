@@ -108,7 +108,7 @@ extension UIButton {
             gradient.colors = [colorOne.cgColor, colorTwo.cgColor]
 
             let shape = CAShapeLayer()
-            shape.lineWidth = 2
+            shape.lineWidth = 4
             shape.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius).cgPath
             shape.strokeColor = UIColor.black.cgColor
             shape.fillColor = UIColor.clear.cgColor

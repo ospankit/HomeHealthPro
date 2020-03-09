@@ -13,7 +13,7 @@ class DashBoardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dashBoardTotalLabel: UILabel!
     
     func dashboardCollectionViewInitialSetting() {
-        dashBoardCountButton.addBorderWithCircleColor(width: 2)
+        dashBoardCountButton.addBorderWithCircleColor(width: 2.2)
         dashBoardCountButton.makeCornerRadius(raidus: dashBoardCountButton.frame.size.height/2.2)
         dashBoardCountButton.isUserInteractionEnabled = false
         tintColor = UIColor.colorPrimary

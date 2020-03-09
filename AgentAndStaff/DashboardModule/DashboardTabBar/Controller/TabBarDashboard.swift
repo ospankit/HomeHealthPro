@@ -10,6 +10,8 @@ import UIKit
 
 protocol hideMenuButtonProtocol {
     func hideMenuButton(title:String)
+    func hideMenuButton()
+    func unhideMenuButton()
 }
 
 class TabBarDashboard: UITabBarController{
@@ -27,6 +29,14 @@ class TabBarDashboard: UITabBarController{
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         self.hideMenuButtonDelegate?.hideMenuButton(title: item.title!)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.hideMenuButtonDelegate?.hideMenuButton()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.hideMenuButtonDelegate?.unhideMenuButton()
     }
     
 }

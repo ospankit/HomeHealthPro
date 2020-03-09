@@ -15,10 +15,15 @@ class DashboardVC: UIViewController {
     @IBOutlet weak var dashBoardUpperView: UIView!
     @IBOutlet weak var dashBooardCollectionView: UICollectionView!
     let transition = CATransition()
+    let dashboardLabelArray = ["Total Patients","Total Clinicians","Visits Scheduled","Pending Visits"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSettingoOfDashboardVc()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
     }
 }
 
@@ -47,6 +52,7 @@ extension DashboardVC: UICollectionViewDelegate,UICollectionViewDataSource,UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Controller.DashBoardCollectionViewCell.identifier, for: indexPath) as! DashBoardCollectionViewCell
         cell.dashboardCollectionViewInitialSetting()
+        cell.dashBoardTotalLabel.text = dashboardLabelArray[indexPath.row]
         return cell
     }
     
@@ -60,5 +66,12 @@ extension DashboardVC: UICollectionViewDelegate,UICollectionViewDataSource,UICol
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath == IndexPath(row: 0, section: 0) {
+            let vc = UIStoryboard(name: StoryBoard.patients.indentifier, bundle: nil).instantiateViewController(identifier: Controller.AssignedPatients.identifier) as! AssignedPatients
+            navigationController?.pushViewController(vc, animated: false)
+        }
     }
 }

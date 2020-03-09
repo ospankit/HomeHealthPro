@@ -1,5 +1,5 @@
 //
-//  StoryboardIndentifiers.swift
+//  Storyboard .swift
 //  HomeHealthPro
 //
 //  Created by Ankit on 27/02/20.
@@ -11,6 +11,7 @@ import Foundation
 enum StoryBoard {
     case Login
     case Dashboard
+    case patients
 }
 
 extension StoryBoard {
@@ -18,6 +19,7 @@ extension StoryBoard {
         switch self {
         case .Login: return "Login"
         case .Dashboard: return "Dashboard"
+        case .patients: return "patients"
         }
     }
 }
