@@ -25,6 +25,11 @@ enum Controller {
     case DocumentCollectionViewCell
     case AssignedPatients
     case PatientsDetailsTableCell
+    case OTPVC
+    case ChangePasswordVC
+    case ScheduleVisitPatientDetailVC
+    case ScheduleVisitPageViewController
+    case ScheduleVisitDetailVC
 }
 
 extension Controller {
@@ -46,6 +51,11 @@ extension Controller {
         case .DocumentCollectionViewCell: return "DocumentCollectionViewCell"
         case .AssignedPatients: return "AssignedPatients"
         case .PatientsDetailsTableCell: return "PatientsDetailsTableCell"
+        case .OTPVC: return "OTPVC"
+        case .ChangePasswordVC: return "ChangePasswordVC"
+        case .ScheduleVisitPatientDetailVC: return "ScheduleVisitPatientDetailVC"
+        case .ScheduleVisitPageViewController: return "ScheduleVisitPageViewController"
+        case .ScheduleVisitDetailVC: return "ScheduleVisitDetailVC"
         }
     }
 }

@@ -49,9 +49,12 @@ class LoginVc: UIViewController {
             Alert().alertOkView(viewController:self,message:ReuseAbleIdentifier.enterPassword.identifier)
             return
         }
-        let vc = UIStoryboard.init(name: StoryBoard.Dashboard.indentifier, bundle: nil).instantiateViewController(identifier: Controller.MainContainerController.identifier) as! MainContainerController
+        /*let vc = UIStoryboard.init(name: StoryBoard.Dashboard.indentifier, bundle: nil).instantiateViewController(identifier: Controller.MainContainerController.identifier) as! MainContainerController
         UIApplication.shared.windows.first?.rootViewController = vc
-        UIApplication.shared.windows.first?.makeKeyAndVisible()
+        UIApplication.shared.windows.first?.makeKeyAndVisible()*/
+        let vc = storyboard?.instantiateViewController(identifier: Controller.OTPVC.identifier) as! OTPVC
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false, completion: nil)
     }
 }
 

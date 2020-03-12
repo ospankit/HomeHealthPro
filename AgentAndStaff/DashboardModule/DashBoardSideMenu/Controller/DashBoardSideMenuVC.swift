@@ -61,6 +61,7 @@ extension DashBoardSideMenuVC : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Controller.DashBoardSideMenuTableViewCell.identifier) as! DashBoardSideMenuTableViewCell
         cell.dashBoardSideMenuLabel.text = dashBoardSideMenuLabelNameArray[indexPath.row]
+        cell.dashBoardSideMenuImagevIew.image = UIImage(named: dashBoardSideMenuLabelNameArray[indexPath.row])
         return cell
     }
     
@@ -70,6 +71,6 @@ extension DashBoardSideMenuVC : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 60
     }
 }

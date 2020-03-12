@@ -15,7 +15,7 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var createYourAccountLabel: UILabel!
     @IBOutlet weak var agencyNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var agencyTypeView: UIView!
-    @IBOutlet weak var agencyTypeLabel: UILabel!
+    @IBOutlet weak var agencyTypetextField: SkyFloatingLabelTextField!
     @IBOutlet weak var contactPersonNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var phoneLandlineNumberTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var emailAddressTextField: SkyFloatingLabelTextField!
@@ -40,8 +40,11 @@ class SignUpVC: UIViewController {
     @IBAction func agencyTypeAction(_ sender: Any) {
         dropDown.show()
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.agencyTypeLabel.text = item
-            self.agencyTypeLabel.textColor = UIColor.colorPrimary
+            self.agencyTypetextField.text = item
+            self.agencyTypetextField.selectedLineColor = UIColor.colorPrimary
+            self.agencyTypetextField.selectedTitleColor = UIColor.colorPrimary
+            self.agencyTypetextField.textColor = UIColor.colorPrimaryDark
+            self.agencyTypetextField.tintColor = UIColor.colorPrimary
         }
     }
     
@@ -64,6 +67,10 @@ extension SignUpVC {
         contactPersonNameTextField.selectedTitleColor = UIColor.colorPrimary
         contactPersonNameTextField.textColor = UIColor.colorPrimaryDark
         contactPersonNameTextField.tintColor = UIColor.colorPrimary
+        agencyTypetextField.selectedLineColor = UIColor.colorPrimary
+        agencyTypetextField.selectedTitleColor = UIColor.colorPrimary
+        agencyTypetextField.textColor = UIColor.colorPrimaryDark
+        agencyTypetextField.tintColor = UIColor.colorPrimary
         phoneLandlineNumberTextField.selectedLineColor = UIColor.colorPrimary
         phoneLandlineNumberTextField.selectedTitleColor = UIColor.colorPrimary
         phoneLandlineNumberTextField.textColor = UIColor.colorPrimaryDark

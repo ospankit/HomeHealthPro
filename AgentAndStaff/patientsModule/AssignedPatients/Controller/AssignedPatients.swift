@@ -50,6 +50,8 @@ extension AssignedPatients {
         patientsSearchTextField.font = UIFont(name: fontConstant.SFProDisplayRegular.identifier, size: 20)
         
         //patientsSearchTextField search imageView
+        patientsSearchTextField.addBorder(width: 0.5)
+        patientsSearchTextField.leftPadding(paddingSize: 10)
         let searchImage = UIImageView(frame: CGRect(x: 10, y: 5, width: 20, height: 20))
         searchImage.contentMode = .scaleAspectFit
         searchImage.image = UIImage(named: imageConstant.Search.identifier)

@@ -12,6 +12,8 @@ enum StoryBoard {
     case Login
     case Dashboard
     case patients
+    case ChangePassword
+    case ScheduleVisit
 }
 
 extension StoryBoard {
@@ -20,6 +22,8 @@ extension StoryBoard {
         case .Login: return "Login"
         case .Dashboard: return "Dashboard"
         case .patients: return "patients"
+        case .ChangePassword: return "ChangePassword"
+        case .ScheduleVisit: return "ScheduleVisit"
         }
     }
 }

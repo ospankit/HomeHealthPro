@@ -16,7 +16,7 @@ public class Extension : NSObject {
 extension UIView {
     func makeCornerRadius(raidus: CGFloat){
         DispatchQueue.main.async {
-            //self.layer.masksToBounds = true
+            self.layer.masksToBounds = true
             self.layer.cornerRadius = raidus
             
             self.layoutIfNeeded()

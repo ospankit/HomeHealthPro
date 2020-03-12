@@ -37,10 +37,16 @@ class MyAccountVC: UIViewController {
     @IBOutlet weak var myAccountSwiftLabelFix: UILabel!
     @IBOutlet weak var myAccountBankNameLabelFix: UILabel!
     @IBOutlet weak var myAccountBankAddressLabelFix: UILabel!
+    @IBOutlet weak var changePasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSettingoOfMyAccountVC()
+    }
+    
+    @IBAction func changePasswordAction(_ sender: Any) {
+        let vc = UIStoryboard(name: StoryBoard.ChangePassword.indentifier, bundle: nil).instantiateViewController(identifier: Controller.ChangePasswordVC.identifier) as! ChangePasswordVC
+        navigationController?.pushViewController(vc, animated: false)
     }
 }
 
@@ -81,6 +87,9 @@ extension MyAccountVC {
         
         //imageview round
         myAccountAgencyImageView.makeCornerRadius(raidus: myAccountAgencyImageView.frame.size.height/2)
+        
+        //adding color to button
+        changePasswordButton.tintColor = .colorPrimaryDark
         
     }
 }

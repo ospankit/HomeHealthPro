@@ -41,6 +41,9 @@ extension DashboardVC {
         
         //addcornerRadius to addBalanceButton
         addBalanceButton.makeCornerRadius(raidus: addBalanceButton.frame.size.height/2)
+        
+        //reloading collection view
+        dashBooardCollectionView.reloadData()
     }
 }
 

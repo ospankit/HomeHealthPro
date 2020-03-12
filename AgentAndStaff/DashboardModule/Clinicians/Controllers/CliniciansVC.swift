@@ -47,6 +47,7 @@ extension CliniciansVC {
         inactiveClinicianView.dropShadowAllSide(color: .lightGray, offSet: CGSize(width: 1, height: 1))
         
         //search adding to cliniciansearch bar
+        clinicianSearchBar.addBorder(width: 0.5)
         let searchImage = UIImageView(frame: CGRect(x: 10, y: 5, width: 20, height: 20))
         searchImage.contentMode = .scaleAspectFit
         searchImage.image = UIImage(named: imageConstant.Search.identifier)
