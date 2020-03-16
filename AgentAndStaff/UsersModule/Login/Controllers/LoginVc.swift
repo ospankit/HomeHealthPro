@@ -22,10 +22,12 @@ class LoginVc: UIViewController {
     @IBOutlet weak var loginAlreadyAccountLabel: UILabel!
     @IBOutlet weak var loginSignUpButton: UIButton!
     
+    var viewModel = LoginViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSettingOfLoginVc()
-        // Do any additional setup after loading the view.
+        viewModel.delegate = self
     }
     
     @IBAction func forgetPasswordAction(_ sender: UIButton) {
@@ -49,12 +51,8 @@ class LoginVc: UIViewController {
             Alert().alertOkView(viewController:self,message:ReuseAbleIdentifier.enterPassword.identifier)
             return
         }
-        /*let vc = UIStoryboard.init(name: StoryBoard.Dashboard.indentifier, bundle: nil).instantiateViewController(identifier: Controller.MainContainerController.identifier) as! MainContainerController
-        UIApplication.shared.windows.first?.rootViewController = vc
-        UIApplication.shared.windows.first?.makeKeyAndVisible()*/
-        let vc = storyboard?.instantiateViewController(identifier: Controller.OTPVC.identifier) as! OTPVC
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: false, completion: nil)
+        let loginRequest = LoginRequest(Email: username, Password: password, IsWebLogin: false)
+        viewModel.checkLoginDetails(param: loginRequest)
     }
 }
 
@@ -95,4 +93,32 @@ extension LoginVc: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+}
+
+extension LoginVc: LoginViewModelProtocol {
+    func showMessage(message: String) {
+        Alert().alertOkView(viewController: self, message: message)
+    }
+    
+    func loginSucess() {
+        DispatchQueue.main.async {
+            let vc = self.storyboard?.instantiateViewController(identifier: Controller.OTPVC.identifier) as! OTPVC
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: false, completion: nil)
+        }
+    }
+    
+    func showActivityIndicator() {
+        DispatchQueue.main.async {
+            //add indicator
+        }
+    }
+    
+    func hideActivityIndicator() {
+        DispatchQueue.main.async {
+            //remove indicator
+        }
+    }
+    
+    
 }

@@ -15,7 +15,7 @@ class MainContainerController: UIViewController {
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet var mainView: UIView!
     
-    var navController : UINavigationController?
+    var navController : DashBoardNavigation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ class MainContainerController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        navController = segue.destination as? UINavigationController
+        navController = segue.destination as? DashBoardNavigation
     }
     
     @IBAction func menuAction(_ sender: UIBarButtonItem) {
@@ -50,6 +50,12 @@ class MainContainerController: UIViewController {
         transition.subtype = CATransitionSubtype.fromRight
         transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeOut)
         view.window!.layer.add(transition, forKey: kCATransition)
+    }
+    
+    func showDashBoard() {
+        let destination = storyboard?.instantiateViewController(identifier: Controller.tabBarDashboard.identifier) as! TabBarDashboard
+        destination.setSelectedIndex = 0
+        navController?.pushViewController(destination, animated: false)
     }
     
     func pushMenuTapToView(menuType:MenuType) {

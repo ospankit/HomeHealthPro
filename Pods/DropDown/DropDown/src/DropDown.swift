@@ -103,7 +103,11 @@ public final class DropDown: UIView {
 
 	/// The view to which the drop down will displayed onto.
 	public weak var anchorView: AnchorView? {
-		didSet { setNeedsUpdateConstraints() }
+		didSet {
+            DispatchQueue.main.async {
+                self.setNeedsUpdateConstraints()
+            }
+        }
 	}
 
 	/**

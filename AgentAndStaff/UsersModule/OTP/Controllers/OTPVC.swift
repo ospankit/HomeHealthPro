@@ -72,3 +72,36 @@ extension OTPVC {
         continueButton.makeCornerRadius(raidus: continueButton.frame.size.height/2)
     }
 }
+
+extension OTPVC : UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (textField.text!.count < 1  && string.count > 0){
+            let nextTag = textField.tag + 1;
+
+            // get next responder
+            var nextResponder = textField.superview?.viewWithTag(nextTag);
+
+            if (nextResponder == nil){
+                nextResponder = textField.superview?.viewWithTag(1);
+            }
+            textField.text = string;
+            nextResponder?.becomeFirstResponder();
+            return false;
+        }
+        else if (textField.text!.count >= 1  && string.count == 0){
+            // on deleteing value from Textfield
+            let previousTag = textField.tag - 1;
+
+            // get next responder
+            var previousResponder = textField.superview?.viewWithTag(previousTag);
+
+            if (previousResponder == nil){
+                previousResponder = textField.superview?.viewWithTag(1);
+            }
+            textField.text = "";
+            previousResponder?.becomeFirstResponder();
+            return false;
+        }
+        return true;
+    }
+}

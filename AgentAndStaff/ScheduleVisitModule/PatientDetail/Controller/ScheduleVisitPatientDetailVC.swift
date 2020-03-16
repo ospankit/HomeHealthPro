@@ -34,6 +34,8 @@ class ScheduleVisitPatientDetailVC: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    var scheduleVisitPageView : ScheduleVisitPageViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSettingOfScheduleVisitPatientDetailVC()
@@ -41,11 +43,11 @@ class ScheduleVisitPatientDetailVC: UIViewController {
     }
     
     @IBAction func scheduleVisitBackAction(_ sender: Any) {
-        navigationController?.popViewController(animated: false)
+        let mainContainerController = UIApplication.shared.windows.first?.rootViewController as! MainContainerController
+        mainContainerController.showDashBoard()
     }
     
     @IBAction func patientDetailNextButton(_ sender: Any) {
-        var scheduleVisitPageView : ScheduleVisitPageViewController?
         scheduleVisitPageView = self.parent as? ScheduleVisitPageViewController
         if let vc = scheduleVisitPageView?.showViewController[1] {
             scheduleVisitPageView?.backAndForwardActionPageViewController(viewController: vc)

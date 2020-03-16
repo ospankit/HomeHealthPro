@@ -13,6 +13,8 @@
 		BC1CD4DE2418EF2300D7247D /* ScheduleVisit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1CD4DD2418EF2300D7247D /* ScheduleVisit.storyboard */; };
 		BC1CD4E62418F2C900D7247D /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1CD4E52418F2C900D7247D /* ChangePassword.storyboard */; };
 		BC1CD4ED2418F67300D7247D /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1CD4EC2418F67300D7247D /* ChangePasswordVC.swift */; };
+		BC2A72A9241FAA8900D0CED5 /* signUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2A72A8241FAA8900D0CED5 /* signUpViewModel.swift */; };
+		BC2A72AB241FAABE00D0CED5 /* signUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2A72AA241FAABE00D0CED5 /* signUpModel.swift */; };
 		BC3674FF2407D222006EC471 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3674FE2407D222006EC471 /* SignUpVC.swift */; };
 		BC3675012407DE71006EC471 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3675002407DE71006EC471 /* SkyFloatingLabelTextField.swift */; };
 		BC4B2CA12408E0D200C2173B /* SF-Pro-Display-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2C9A2408E0D100C2173B /* SF-Pro-Display-Heavy.ttf */; };
@@ -54,6 +56,11 @@
 		BCAC0B58240D44ED000A1720 /* DashBoardSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B57240D44ED000A1720 /* DashBoardSideMenuVC.swift */; };
 		BCAC0B5C240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC0B5B240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift */; };
 		BCCD3B8C24192B3500F3CECD /* ScheduleVisitPatientDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD3B8B24192B3500F3CECD /* ScheduleVisitPatientDetailVC.swift */; };
+		BCE1FA2A241BC00D00E9D7F1 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1FA29241BC00D00E9D7F1 /* ApiManager.swift */; };
+		BCE1FA2C241BC03100E9D7F1 /* RemoteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1FA2B241BC03100E9D7F1 /* RemoteHelper.swift */; };
+		BCE1FA2F241BC59100E9D7F1 /* UrlConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1FA2E241BC59100E9D7F1 /* UrlConstant.swift */; };
+		BCE1FA33241BCD3D00E9D7F1 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1FA32241BCD3D00E9D7F1 /* LoginModel.swift */; };
+		BCE1FA35241BD60300E9D7F1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE1FA34241BD60300E9D7F1 /* LoginViewModel.swift */; };
 		BCE3085D2416522E00BBDBF1 /* patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE3085C2416522E00BBDBF1 /* patients.storyboard */; };
 		BCE30864241652D000BBDBF1 /* AssignedPatients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE30863241652D000BBDBF1 /* AssignedPatients.swift */; };
 		BCE308662416706A00BBDBF1 /* PatientsDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE308652416706A00BBDBF1 /* PatientsDetailsTableCell.swift */; };
@@ -88,6 +95,8 @@
 		BC1CD4DD2418EF2300D7247D /* ScheduleVisit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleVisit.storyboard; sourceTree = "<group>"; };
 		BC1CD4E52418F2C900D7247D /* ChangePassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
 		BC1CD4EC2418F67300D7247D /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		BC2A72A8241FAA8900D0CED5 /* signUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewModel.swift; sourceTree = "<group>"; };
+		BC2A72AA241FAABE00D0CED5 /* signUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpModel.swift; sourceTree = "<group>"; };
 		BC3674FE2407D222006EC471 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		BC3675002407DE71006EC471 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		BC4B2C9A2408E0D100C2173B /* SF-Pro-Display-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.ttf"; sourceTree = "<group>"; };
@@ -135,6 +144,11 @@
 		BCAC0B57240D44ED000A1720 /* DashBoardSideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardSideMenuVC.swift; sourceTree = "<group>"; };
 		BCAC0B5B240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardSideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		BCCD3B8B24192B3500F3CECD /* ScheduleVisitPatientDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVisitPatientDetailVC.swift; sourceTree = "<group>"; };
+		BCE1FA29241BC00D00E9D7F1 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		BCE1FA2B241BC03100E9D7F1 /* RemoteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteHelper.swift; sourceTree = "<group>"; };
+		BCE1FA2E241BC59100E9D7F1 /* UrlConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlConstant.swift; sourceTree = "<group>"; };
+		BCE1FA32241BCD3D00E9D7F1 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		BCE1FA34241BD60300E9D7F1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BCE3085C2416522E00BBDBF1 /* patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = patients.storyboard; sourceTree = "<group>"; };
 		BCE30863241652D000BBDBF1 /* AssignedPatients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignedPatients.swift; sourceTree = "<group>"; };
 		BCE308652416706A00BBDBF1 /* PatientsDetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsDetailsTableCell.swift; sourceTree = "<group>"; };
@@ -345,6 +359,7 @@
 		BC3674FB2407D1D4006EC471 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC2A72AA241FAABE00D0CED5 /* signUpModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,6 +374,7 @@
 		BC3674FD2407D1E1006EC471 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BC2A72A8241FAA8900D0CED5 /* signUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -524,7 +540,9 @@
 		BC5A90D62406983D00682179 = {
 			isa = PBXGroup;
 			children = (
-				BC6DE4AB240FF00900BE7A6D /* MainContainerController.swift */,
+				BCE1FA2D241BC55E00E9D7F1 /* SkyFloatingLabelTextField */,
+				BCE1FA28241BBFB900E9D7F1 /* Networking */,
+				BCE1FA26241BBEBF00E9D7F1 /* MainContainerController */,
 				BC4B2CB22409110400C2173B /* Alert */,
 				BC4B2C992408E09F00C2173B /* DisplayTft */,
 				BC5A912B2406A8BA00682179 /* Helper */,
@@ -593,6 +611,7 @@
 		BC5A9118240698AA00682179 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BCE1FA32241BCD3D00E9D7F1 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -607,6 +626,7 @@
 		BC5A911B240698CA00682179 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BCE1FA34241BD60300E9D7F1 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -635,8 +655,8 @@
 				BC793F892407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift */,
 				BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */,
 				BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */,
-				BC3675002407DE71006EC471 /* SkyFloatingLabelTextField.swift */,
 				BC6DE49F240FA16300BE7A6D /* Constant.swift */,
+				BCE1FA2E241BC59100E9D7F1 /* UrlConstant.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -958,6 +978,31 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BCE1FA26241BBEBF00E9D7F1 /* MainContainerController */ = {
+			isa = PBXGroup;
+			children = (
+				BC6DE4AB240FF00900BE7A6D /* MainContainerController.swift */,
+			);
+			path = MainContainerController;
+			sourceTree = "<group>";
+		};
+		BCE1FA28241BBFB900E9D7F1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BCE1FA29241BC00D00E9D7F1 /* ApiManager.swift */,
+				BCE1FA2B241BC03100E9D7F1 /* RemoteHelper.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BCE1FA2D241BC55E00E9D7F1 /* SkyFloatingLabelTextField */ = {
+			isa = PBXGroup;
+			children = (
+				BC3675002407DE71006EC471 /* SkyFloatingLabelTextField.swift */,
+			);
+			path = SkyFloatingLabelTextField;
+			sourceTree = "<group>";
+		};
 		BCE3085B241651CD00BBDBF1 /* patientsModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -1271,9 +1316,13 @@
 				BC6420D624124E5E00053447 /* ClinicianCollectionCell.swift in Sources */,
 				BCAC0B49240D0488000A1720 /* SettingsVC.swift in Sources */,
 				BCAC0B58240D44ED000A1720 /* DashBoardSideMenuVC.swift in Sources */,
+				BCE1FA2C241BC03100E9D7F1 /* RemoteHelper.swift in Sources */,
 				BC3675012407DE71006EC471 /* SkyFloatingLabelTextField.swift in Sources */,
 				BC1CD4DB2418E57700D7247D /* OTPVC.swift in Sources */,
+				BCE1FA2A241BC00D00E9D7F1 /* ApiManager.swift in Sources */,
+				BCE1FA2F241BC59100E9D7F1 /* UrlConstant.swift in Sources */,
 				BC59C227241642710083D7C3 /* DocumentCollectionViewCell.swift in Sources */,
+				BCE1FA33241BCD3D00E9D7F1 /* LoginModel.swift in Sources */,
 				BC793F8A2407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift in Sources */,
 				BCCD3B8C24192B3500F3CECD /* ScheduleVisitPatientDetailVC.swift in Sources */,
 				BC4B2CB42409113100C2173B /* Alert.swift in Sources */,
@@ -1283,12 +1332,15 @@
 				BC6DE4AC240FF00900BE7A6D /* MainContainerController.swift in Sources */,
 				BC5A912A24069D1300682179 /* LoginVc.swift in Sources */,
 				BC6DE49E240F8BCC00BE7A6D /* DashBoardNavigation.swift in Sources */,
+				BC2A72AB241FAABE00D0CED5 /* signUpModel.swift in Sources */,
 				BC4B2CC424093C5900C2173B /* TabBarDashboard.swift in Sources */,
 				BCAC0B46240D046B000A1720 /* CliniciansVC.swift in Sources */,
 				BC4B2CB62409132100C2173B /* AppNameIdentifier.swift in Sources */,
 				BC4BF603241A3BD800A4A207 /* ScheduleVisitPageViewController.swift in Sources */,
+				BCE1FA35241BD60300E9D7F1 /* LoginViewModel.swift in Sources */,
 				BC793F8624079A9200AD2D47 /* ForgetPasswordVc.swift in Sources */,
 				BCAC0B5C240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift in Sources */,
+				BC2A72A9241FAA8900D0CED5 /* signUpViewModel.swift in Sources */,
 				BC6DE4A0240FA16300BE7A6D /* Constant.swift in Sources */,
 				BC5A90E52406983D00682179 /* SceneDelegate.swift in Sources */,
 				BCAC0B4F240D111B000A1720 /* DashBoardCollectionViewCell.swift in Sources */,

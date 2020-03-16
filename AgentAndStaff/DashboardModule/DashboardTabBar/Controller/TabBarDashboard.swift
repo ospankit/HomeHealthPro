@@ -30,9 +30,7 @@ class TabBarDashboard: UITabBarController{
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         self.hideMenuButtonDelegate?.hideMenuButton(title: item.title!)
         if item.title! == "" {
-            let vc = UIStoryboard(name: StoryBoard.ScheduleVisit.indentifier, bundle: nil).instantiateViewController(identifier: Controller.ScheduleVisitPageViewController.identifier) as! ScheduleVisitPageViewController
-            navigationController?.pushViewController(vc, animated: false)
-            
+            self.tabBar.isHidden = true
         }
     }
     

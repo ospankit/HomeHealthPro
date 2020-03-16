@@ -23,6 +23,10 @@ class ScheduleVisitPageViewController: UIPageViewController {
             setViewControllers([firstViewController], direction: .forward, animated: false, completion: nil)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.source)
+    }
 }
 
 extension ScheduleVisitPageViewController {
