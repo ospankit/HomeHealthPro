@@ -25,7 +25,6 @@
 		BC4B2CA62408E0D200C2173B /* SF-Pro-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2C9F2408E0D100C2173B /* SF-Pro-Display-Bold.ttf */; };
 		BC4B2CA72408E0D200C2173B /* SF-Pro-Display-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2CA02408E0D200C2173B /* SF-Pro-Display-Black.ttf */; };
 		BC4B2CB42409113100C2173B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CB32409113100C2173B /* Alert.swift */; };
-		BC4B2CB62409132100C2173B /* AppNameIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */; };
 		BC4B2CBE2409213B00C2173B /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4B2CBD2409213B00C2173B /* Dashboard.storyboard */; };
 		BC4B2CC0240929DF00C2173B /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CBF240929DF00C2173B /* DashboardVC.swift */; };
 		BC4B2CC424093C5900C2173B /* TabBarDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CC324093C5900C2173B /* TabBarDashboard.swift */; };
@@ -64,6 +63,7 @@
 		BCE3085D2416522E00BBDBF1 /* patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE3085C2416522E00BBDBF1 /* patients.storyboard */; };
 		BCE30864241652D000BBDBF1 /* AssignedPatients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE30863241652D000BBDBF1 /* AssignedPatients.swift */; };
 		BCE308662416706A00BBDBF1 /* PatientsDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE308652416706A00BBDBF1 /* PatientsDetailsTableCell.swift */; };
+		BCED0BDA24211FCE0068B2E6 /* ReuseAbleIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2CB52409132100C2173B /* ReuseAbleIdentifier.swift */; };
 		D887E2352C7CA634E904F2B2 /* Pods_HomeHealthPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B6D23857AE9DCF26410A58 /* Pods_HomeHealthPro.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +107,7 @@
 		BC4B2C9F2408E0D100C2173B /* SF-Pro-Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.ttf"; sourceTree = "<group>"; };
 		BC4B2CA02408E0D200C2173B /* SF-Pro-Display-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.ttf"; sourceTree = "<group>"; };
 		BC4B2CB32409113100C2173B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNameIdentifier.swift; sourceTree = "<group>"; };
+		BC4B2CB52409132100C2173B /* ReuseAbleIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseAbleIdentifier.swift; sourceTree = "<group>"; };
 		BC4B2CBD2409213B00C2173B /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		BC4B2CBF240929DF00C2173B /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		BC4B2CC324093C5900C2173B /* TabBarDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDashboard.swift; sourceTree = "<group>"; };
@@ -654,7 +654,7 @@
 				BC5A912E2406B63200682179 /* Extension.swift */,
 				BC793F892407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift */,
 				BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */,
-				BC4B2CB52409132100C2173B /* AppNameIdentifier.swift */,
+				BC4B2CB52409132100C2173B /* ReuseAbleIdentifier.swift */,
 				BC6DE49F240FA16300BE7A6D /* Constant.swift */,
 				BCE1FA2E241BC59100E9D7F1 /* UrlConstant.swift */,
 			);
@@ -1335,8 +1335,8 @@
 				BC2A72AB241FAABE00D0CED5 /* signUpModel.swift in Sources */,
 				BC4B2CC424093C5900C2173B /* TabBarDashboard.swift in Sources */,
 				BCAC0B46240D046B000A1720 /* CliniciansVC.swift in Sources */,
-				BC4B2CB62409132100C2173B /* AppNameIdentifier.swift in Sources */,
 				BC4BF603241A3BD800A4A207 /* ScheduleVisitPageViewController.swift in Sources */,
+				BCED0BDA24211FCE0068B2E6 /* ReuseAbleIdentifier.swift in Sources */,
 				BCE1FA35241BD60300E9D7F1 /* LoginViewModel.swift in Sources */,
 				BC793F8624079A9200AD2D47 /* ForgetPasswordVc.swift in Sources */,
 				BCAC0B5C240D4DBA000A1720 /* DashBoardSideMenuTableViewCell.swift in Sources */,

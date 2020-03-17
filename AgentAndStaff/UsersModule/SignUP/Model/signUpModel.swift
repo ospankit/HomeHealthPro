@@ -8,19 +8,21 @@
 
 import Foundation
 
-struct AgencyTypeModel:Codable{
+//agency model
+struct DropdownDataTypeModel:Codable{
     let status:Bool
     let message:String
     let totalRecords:Int
-    let data : [dataArray]
+    let data : [DropdownData]
 }
 
-struct dataArray:Codable {
+struct DropdownData:Codable {
     let id : Int
     let value : String
     let order : Int
 }
 
+//master model
 struct masterList:Codable {
     let `Type`:String
     let CityId:Int

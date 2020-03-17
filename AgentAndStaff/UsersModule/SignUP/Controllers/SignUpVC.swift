@@ -17,7 +17,10 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var cityNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var stateNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var zipcodeNameTextField: SkyFloatingLabelTextField!
-    @IBOutlet weak var agencyTypeView: UIView!
+    @IBOutlet weak var agencyDropDownView: UIView!
+    @IBOutlet weak var stateDropDownView: UIView!
+    @IBOutlet weak var zipcodeDropDownView: UIView!
+    @IBOutlet weak var cityDropDownView: UIView!
     @IBOutlet weak var agencyTypetextField: SkyFloatingLabelTextField!
     @IBOutlet weak var contactPersonNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var phoneLandlineNumberTextField: SkyFloatingLabelTextField!
@@ -25,18 +28,40 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var faxNumberTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var addressLineTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var emrNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var alreadyHaveAnAccountLabel: UILabel!
+    @IBOutlet weak var doHaveEMRSystemlabel: UILabel!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var emrYesRadiobutton: UIButton!
+    @IBOutlet weak var emrNoRadioButton: UIButton!
+    @IBOutlet weak var homeHealthProElectronicYesRadioButton: UIButton!
+    @IBOutlet weak var homeHealthProElectronicNoRadioButton: UIButton!
     @IBOutlet weak var iAcceptLabel: UILabel!
     var passwordHideShowButton = UIButton(type: .custom)
     var isSecureTextEntry = true
     
-    let dropDownAgency = DropDown()
-    let dropDownCity = DropDown()
+    @IBOutlet weak var utilizeHomeHealthProElectronicYesNoView: UIView!
     
-    var agencyData = [dataArray]()
-    var cityData = [dataArray]()
+    @IBOutlet var utilizeHomeHealthproElectronicAndIAcceptTermsDistance: NSLayoutConstraint!
+    @IBOutlet var emrNameTextFieldAndIAcceptTermsDistanceConstraint: NSLayoutConstraint!
+    @IBOutlet var ulitizeHomeHealthProEletronicYesNoAndEmrYesNoDistanceConstraint: NSLayoutConstraint!
+    @IBOutlet var appectTermsAndYesNoEmrDistanceConstraint: NSLayoutConstraint!
+    @IBOutlet var yesRadioButtonEmrTextFieldDistance: NSLayoutConstraint!
+    
+    //@IBOutlet weak var emrNameTextfieldConstarint: NSLayoutConstraint!
+    var stateId = 0
+    var cityId = 0
+    
+    let dropDownAgency = DropDown()
+    let dropDownState = DropDown()
+    let dropDownCity = DropDown()
+    let dropDownZipcode  = DropDown()
+    
+    var agencyData = [DropdownData]()
+    var stateData = [DropdownData]()
+    var cityData = [DropdownData]()
+    var zipcodeData = [DropdownData]()
     
     var viewModel = signUpViewModel()
     
@@ -44,10 +69,10 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
         initialSettingOfSignUpVC()
         viewModel.delegate = self
-        let agencyTypeRequest = masterList(Type: "AgencyType", CityId: 0, StateId: 0)
-        viewModel.getInitialAgencyData(param: agencyTypeRequest)
-        let cityTypeRequest = masterList(Type: "City", CityId: 0, StateId: 0)
-        viewModel.getInitialAgencyData(param: cityTypeRequest)
+        let agencyTypeRequest = masterList(Type: "AgencyType", CityId: cityId, StateId: stateId)
+        viewModel.getDropdownListData(for: .agency, param: agencyTypeRequest)
+        let stateRequest = masterList(Type: "State", CityId: cityId, StateId: stateId)
+        viewModel.getDropdownListData(for: .state, param: stateRequest)
     }
     
     @IBAction func agencyTypeAction(_ sender: Any) {
@@ -60,6 +85,20 @@ class SignUpVC: UIViewController {
             self.agencyTypetextField.tintColor = UIColor.colorPrimary
         }
     }
+    @IBAction func stateTypeAction(_ sender: Any) {
+        dropDownState.show()
+        dropDownState.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.stateNameTextField.text = item
+            self.stateNameTextField.selectedLineColor = UIColor.colorPrimary
+            self.stateNameTextField.selectedTitleColor = UIColor.colorPrimary
+            self.stateNameTextField.textColor = UIColor.colorPrimaryDark
+            self.stateNameTextField.tintColor = UIColor.colorPrimary
+            self.stateId = Int(self.stateData[index].id)
+            let cityRequest = masterList(Type: "City", CityId: self.cityId, StateId: self.stateId)
+            self.viewModel.getDropdownListData(for: .city, param: cityRequest)
+        }
+    }
+    
     @IBAction func cityTypeAction(_ sender: Any) {
         dropDownCity.show()
         dropDownCity.selectionAction = { [unowned self] (index: Int, item: String) in
@@ -68,37 +107,138 @@ class SignUpVC: UIViewController {
             self.cityNameTextField.selectedTitleColor = UIColor.colorPrimary
             self.cityNameTextField.textColor = UIColor.colorPrimaryDark
             self.cityNameTextField.tintColor = UIColor.colorPrimary
+            self.cityId = Int(self.cityData[index].id)
+            let zipcodeRequest = masterList(Type: "ZipCode", CityId: self.cityId, StateId: self.stateId)
+            self.viewModel.getDropdownListData(for: .zipCode, param: zipcodeRequest)
         }
     }
-    @IBAction func stateTypeAction(_ sender: Any) {
-        /*dropDownAgency.show()
-        dropDownAgency.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.agencyTypetextField.text = item
-            self.agencyTypetextField.selectedLineColor = UIColor.colorPrimary
-            self.agencyTypetextField.selectedTitleColor = UIColor.colorPrimary
-            self.agencyTypetextField.textColor = UIColor.colorPrimaryDark
-            self.agencyTypetextField.tintColor = UIColor.colorPrimary
-        }*/
-    }
+    
     @IBAction func zipcodeTypeAction(_ sender: Any) {
-        /*dropDownAgency.show()
-        dropDownAgency.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.agencyTypetextField.text = item
-            self.agencyTypetextField.selectedLineColor = UIColor.colorPrimary
-            self.agencyTypetextField.selectedTitleColor = UIColor.colorPrimary
-            self.agencyTypetextField.textColor = UIColor.colorPrimaryDark
-            self.agencyTypetextField.tintColor = UIColor.colorPrimary
-        }*/
+        dropDownZipcode.show()
+        dropDownZipcode.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.zipcodeNameTextField.text = item
+            self.zipcodeNameTextField.selectedLineColor = UIColor.colorPrimary
+            self.zipcodeNameTextField.selectedTitleColor = UIColor.colorPrimary
+            self.zipcodeNameTextField.textColor = UIColor.colorPrimaryDark
+            self.zipcodeNameTextField.tintColor = UIColor.colorPrimary
+        }
     }
     
     @IBAction func signInAction(_ sender: UIButton) {
         dismiss(animated: false, completion: nil)
     }
+    
+    @IBAction func emrYesRadioButtonSelected(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.setImage(UIImage(named: "RadioUnselected"), for: .normal)
+            emrNoRadioButton.setImage(UIImage(named: "RadioSelected"), for: .normal)
+            emrNoRadioButton.isSelected = true
+            showUtilizeHomeHealthProElectronicYesNoView()
+        }else {
+            sender.setImage(UIImage(named: "RadioSelected"), for: .normal)
+            emrNoRadioButton.setImage(UIImage(named: "RadioUnselected"), for: .normal)
+            emrNoRadioButton.isSelected = false
+            showEMRTextField()
+        }
+        sender.isSelected = !sender.isSelected
+    }
+    
+    @IBAction func emrNoRadioButtonSelected(_ sender: UIButton) {
+       if sender.isSelected {
+            sender.setImage(UIImage(named: "RadioUnselected"), for: .normal)
+            emrYesRadiobutton.setImage(UIImage(named: "RadioSelected"), for: .normal)
+            emrYesRadiobutton.isSelected = true
+            showEMRTextField()
+        }else {
+            sender.setImage(UIImage(named: "RadioSelected"), for: .normal)
+            emrYesRadiobutton.setImage(UIImage(named: "RadioUnselected"), for: .normal)
+            emrYesRadiobutton.isSelected = false
+            showUtilizeHomeHealthProElectronicYesNoView()
+        }
+        sender.isSelected = !sender.isSelected
+    }
+    
+    @IBAction func homeHealthProElectronicYesRadioButtonSelected(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.setImage(UIImage(named: "RadioUnselected"), for: .normal)
+            homeHealthProElectronicNoRadioButton.setImage(UIImage(named: "RadioSelected"), for: .normal)
+            homeHealthProElectronicNoRadioButton.isSelected = true
+        }else {
+            sender.setImage(UIImage(named: "RadioSelected"), for: .normal)
+            homeHealthProElectronicNoRadioButton.setImage(UIImage(named: "RadioUnselected"), for: .normal)
+            homeHealthProElectronicNoRadioButton.isSelected = false
+        }
+        sender.isSelected = !sender.isSelected
+    }
+    
+    @IBAction func homeHealthProElectronicNoRadioButtonSelected(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.setImage(UIImage(named: "RadioUnselected"), for: .normal)
+            homeHealthProElectronicYesRadioButton.setImage(UIImage(named: "RadioSelected"), for: .normal)
+            homeHealthProElectronicYesRadioButton.isSelected = true
+        }else {
+            sender.setImage(UIImage(named: "RadioSelected"), for: .normal)
+            homeHealthProElectronicYesRadioButton.setImage(UIImage(named: "RadioUnselected"), for: .normal)
+            homeHealthProElectronicYesRadioButton.isSelected = false
+        }
+        sender.isSelected = !sender.isSelected
+    }
+    
+    @IBAction func termsAndConditionCheckBox(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.setImage(UIImage(named: "Uncheck"), for: .normal)
+        }else {
+            sender.setImage(UIImage(named: "Check"), for: .normal)
+        }
+        sender.isSelected = !sender.isSelected
+    }
+    
+    @IBAction func signUpAction(_ sender: UIButton) {
+        if agencyNameTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.agencyName.identifier)
+        }else if agencyNameTextField.validText() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validAgencyName.identifier)
+        }else if agencyTypetextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.agencyType.identifier)
+        }else if contactPersonNameTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.contactPerson.identifier)
+        }else if contactPersonNameTextField.validText() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validConatctPersonName.identifier)
+        }else if phoneLandlineNumberTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.phoneNumber.identifier)
+        }else if emailAddressTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.emailAddress.identifier)
+        }else if emailAddressTextField.validEmail() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validemail.identifier)
+        }else if faxNumberTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.faxNumber.identifier)
+        }else if passwordTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.enterPassword.identifier)
+        }else if addressLineTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.addressLine.identifier)
+        }else if stateNameTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.state.identifier)
+        }else if cityNameTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.city.identifier)
+        }else if zipcodeNameTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.zipcode.identifier)
+        }
+    }
+    
+    
+    
 }
 
 extension SignUpVC {
     //setting view backGroundColor
     func initialSettingOfSignUpVC() {
+        //initial constraint setting
+        appectTermsAndYesNoEmrDistanceConstraint.constant = 20
+        yesRadioButtonEmrTextFieldDistance.isActive = false
+        ulitizeHomeHealthProEletronicYesNoAndEmrYesNoDistanceConstraint.isActive = false
+        emrNameTextFieldAndIAcceptTermsDistanceConstraint.isActive = false
+        utilizeHomeHealthproElectronicAndIAcceptTermsDistance.isActive = false
+        
         //setting color
         signUpMainLabel.textColor = UIColor.colorPrimaryDark
         createYourAccountLabel.textColor = UIColor.fpGrey
@@ -179,30 +319,41 @@ extension SignUpVC {
         isSecureTextEntry = !isSecureTextEntry
     }
     
-    func returnArrayList(dropDownData:[dataArray])->Array<String>{
-        var newList = [String]()
-        for i in 0...dropDownData.count-1 {
-            newList.append((dropDownData[i].value))
-        }
-        return newList
-    }
-    
-    /*func dropDownForAgenyTypeView(){
-        dropDownAgency.anchorView = agencyTypeView
-        dropDownAgency.dataSource = returnArrayList(dropDownData: agencyData)
+    func dropDownDataSet(dropDown:DropDown,dropDownView:UIView,dropDownData:[DropdownData]){
+        dropDown.anchorView = dropDownView
+        dropDown.dataSource = dropDownData.compactMap({$0.value})
         DispatchQueue.main.async {
-            self.dropDownAgency.bottomOffset = CGPoint(x: 0, y: (self.dropDownAgency.anchorView?.plainView.bounds.height)!)
-        }
-    }*/
-    
-    func dropDownSettingView(dropdownName:DropDown,dataToset:[dataArray]){
-        dropdownName.anchorView = agencyTypeView
-        dropdownName.dataSource = returnArrayList(dropDownData: dataToset)
-        DispatchQueue.main.async {
-            self.dropDownAgency.bottomOffset = CGPoint(x: 0, y: (self.dropDownAgency.anchorView?.plainView.bounds.height)!)
+            dropDown.bottomOffset = CGPoint(x: 0, y: (dropDown.anchorView?.plainView.bounds.height)!)
         }
     }
     
+    func showEMRTextField(){
+        DispatchQueue.main.async {
+            self.appectTermsAndYesNoEmrDistanceConstraint.isActive = false
+            self.yesRadioButtonEmrTextFieldDistance.isActive = true
+            self.emrNameTextFieldAndIAcceptTermsDistanceConstraint.isActive = true
+            self.ulitizeHomeHealthProEletronicYesNoAndEmrYesNoDistanceConstraint.isActive = false
+            self.utilizeHomeHealthproElectronicAndIAcceptTermsDistance.isActive = false
+            self.yesRadioButtonEmrTextFieldDistance.constant = 4
+            self.emrNameTextFieldAndIAcceptTermsDistanceConstraint.constant = 20
+            self.emrNameTextField.isHidden = false
+            self.utilizeHomeHealthProElectronicYesNoView.isHidden = true
+        }
+    }
+    
+    func showUtilizeHomeHealthProElectronicYesNoView(){
+        DispatchQueue.main.async {
+            self.appectTermsAndYesNoEmrDistanceConstraint.isActive = false
+            self.yesRadioButtonEmrTextFieldDistance.isActive = false
+            self.emrNameTextFieldAndIAcceptTermsDistanceConstraint.isActive = false
+            self.ulitizeHomeHealthProEletronicYesNoAndEmrYesNoDistanceConstraint.isActive = true
+            self.utilizeHomeHealthproElectronicAndIAcceptTermsDistance.isActive = true
+            self.ulitizeHomeHealthProEletronicYesNoAndEmrYesNoDistanceConstraint.constant = 20
+            self.utilizeHomeHealthproElectronicAndIAcceptTermsDistance.constant = 20
+            self.utilizeHomeHealthProElectronicYesNoView.isHidden = false
+            self.emrNameTextField.isHidden = true
+        }
+    }
 }
 
 extension SignUpVC: UITextFieldDelegate {
@@ -213,18 +364,28 @@ extension SignUpVC: UITextFieldDelegate {
 }
 
 extension SignUpVC: signUpViewModelProtocol {
-    func initialCityData(cityData: AgencyTypeModel) {
+    func zipcodeData(zipcodeData: DropdownDataTypeModel) {
+        self.zipcodeData = zipcodeData.data
+        dropDownDataSet(dropDown: dropDownZipcode, dropDownView: zipcodeDropDownView, dropDownData: self.zipcodeData)
+    }
+    
+    func cityData(cityData: DropdownDataTypeModel) {
         self.cityData = cityData.data
-        self.dropDownSettingView(dropdownName: dropDownCity, dataToset: self.cityData)
+        dropDownDataSet(dropDown: dropDownCity, dropDownView: cityDropDownView, dropDownData: self.cityData)
+    }
+    
+    func initialStateData(stateData: DropdownDataTypeModel) {
+        self.stateData = stateData.data
+        dropDownDataSet(dropDown: dropDownState, dropDownView: stateDropDownView, dropDownData: self.stateData)
     }
     
     func showMessage(message: String) {
         Alert().alertOkView(viewController: self, message: message)
     }
     
-    func initialAgenctData(agencyData: AgencyTypeModel) {
+    func initialAgenctData(agencyData: DropdownDataTypeModel) {
         self.agencyData = agencyData.data
-        self.dropDownSettingView(dropdownName: dropDownAgency, dataToset: self.agencyData)
+        dropDownDataSet(dropDown: dropDownAgency, dropDownView: agencyDropDownView, dropDownData: self.agencyData)
     }
     
     func showActivityIndicator() {

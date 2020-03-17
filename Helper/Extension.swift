@@ -13,6 +13,35 @@ public class Extension : NSObject {
     
 }
 
+extension UITextField {
+    func checkEmpty() -> Bool {
+        if self.text!.isEmpty{
+            return true
+        }else {
+            return false
+        }
+    }
+    
+    func validEmail()-> Bool {
+        let email = self.text!
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
+    
+    func validText()-> Bool {
+        let text = self.text!
+        let textRegEx = "[A-Za-z]"
+        let textPred = NSPredicate(format: "SELF MATCHES %@", textRegEx)
+        return textPred.evaluate(with: text)
+    }
+    
+    func leftPadding(paddingSize:Int){
+        self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: paddingSize, height: Int(self.frame.height)))
+        self.leftViewMode = .always
+    }
+}
+
 extension UIView {
     func makeCornerRadius(raidus: CGFloat){
         DispatchQueue.main.async {
@@ -168,12 +197,5 @@ extension UIColor {
         }
     }
     
-}
-
-extension UITextField {
-    func leftPadding(paddingSize:Int){
-        self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: paddingSize, height: Int(self.frame.height)))
-        self.leftViewMode = .always
-    }
 }
 
