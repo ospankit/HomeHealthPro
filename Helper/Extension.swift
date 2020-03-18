@@ -24,21 +24,54 @@ extension UITextField {
     
     func validEmail()-> Bool {
         let email = self.text!
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
         let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
+        return !emailPred.evaluate(with: email)
     }
     
     func validText()-> Bool {
         let text = self.text!
-        let textRegEx = "[A-Za-z]"
+        let textRegEx = ".*[^A-Za-z ].*"
         let textPred = NSPredicate(format: "SELF MATCHES %@", textRegEx)
-        return textPred.evaluate(with: text)
+        return !textPred.evaluate(with: text)
+    }
+    
+    func phoneNumberValidate()-> Bool {
+        if self.text!.count < 12 {
+            return false
+        }
+        return true
+    }
+    
+    func validPassword() -> Bool {
+        let text = self.text!
+        let textRegEx = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$&*])(?=.*[0-9]).{8}$"
+        let textPred = NSPredicate(format: "SELF MATCHES %@", textRegEx)
+        return !textPred.evaluate(with: text)
     }
     
     func leftPadding(paddingSize:Int){
         self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: paddingSize, height: Int(self.frame.height)))
         self.leftViewMode = .always
+    }
+}
+
+extension String {
+    func formattedNumber() -> String {
+        let cleanPhoneNumber = self.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        let mask = "XXX-XXX-XXXX"
+
+        var result = ""
+        var index = cleanPhoneNumber.startIndex
+        for ch in mask where index < cleanPhoneNumber.endIndex {
+            if ch == "X" {
+                result.append(cleanPhoneNumber[index])
+                index = cleanPhoneNumber.index(after: index)
+            } else {
+                result.append(ch)
+            }
+        }
+        return result
     }
 }
 

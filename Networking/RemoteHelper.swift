@@ -86,6 +86,8 @@ extension Environment {
 enum RemoteService {
     case login
     case masterList
+    case agencyAdd
+    case forgetPassword
 }
 
 extension RemoteService {
@@ -94,6 +96,8 @@ extension RemoteService {
         switch self {
         case .login: return URL(string: environment.HTTPProtocol + environment.domain + UrlConstant.loginUrl.identifer)!
         case .masterList: return URL(string: environment.HTTPProtocol + environment.domain + UrlConstant.masterList.identifer)!
+        case .agencyAdd: return URL(string: environment.HTTPProtocol + environment.domain + UrlConstant.agencyAdd.identifer)!
+        case .forgetPassword: return URL(string: environment.HTTPProtocol + environment.domain + UrlConstant.forgetPassword.identifer)!
         }
     }
 }

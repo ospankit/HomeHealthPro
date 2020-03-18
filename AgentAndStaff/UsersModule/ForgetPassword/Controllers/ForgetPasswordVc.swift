@@ -16,9 +16,12 @@ class ForgetPasswordVc: UIViewController {
     @IBOutlet weak var forgetPasswordResetPasswordButton: UIButton!
     @IBOutlet weak var forgetPasswordClickToGoToLoginScreen: UIButton!
     
+    var viewModel = ForgetPasswordViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSettingOfForgetPasswordVc()
+        viewModel.delegate = self
     }
     
     @IBAction func backToLoginViewAction(_ sender: UIButton) {
@@ -26,10 +29,14 @@ class ForgetPasswordVc: UIViewController {
     }
     
     @IBAction func resetPasswordAction(_ sender: UIButton) {
-        guard let emailAddress = forgetPasswordEmailAddressTextField.text , !emailAddress.isEmpty else {
-            Alert().alertOkView(viewController:self,message:ReuseAbleIdentifier.enterEmailAddress.identifier)
-            return
+        if forgetPasswordEmailAddressTextField.checkEmpty() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.emailAddress.identifier)
+        }else if forgetPasswordEmailAddressTextField.validEmail() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validemail.identifier)
         }
+        
+        let forgetPasswordRequest = ForgetPasswordRequest(Email: forgetPasswordEmailAddressTextField.text!)
+        viewModel.forgetPassword(param: forgetPasswordRequest)
     }
     
     
@@ -66,4 +73,30 @@ extension ForgetPasswordVc: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+}
+
+extension ForgetPasswordVc: ForgetPasswordViewModelProtocol {
+    func forgetPasswordLinkSent(forgetPasswordResponse: ForgetPasswordModel) {
+        DispatchQueue.main.async {
+            Alert().alertOkView(viewController: self, message: forgetPasswordResponse.message)
+        }
+    }
+    
+    func showActivityIndicator() {
+        //indicator show
+    }
+    
+    func hideActivityIndicator() {
+        //hide indictor
+    }
+    
+    func showMessage(message: String) {
+        DispatchQueue.main.async {
+            Alert().alertOkView(viewController: self, message: message)
+        }
+    }
+    
+    
+    
+    
 }

@@ -49,9 +49,13 @@ class SignUpVC: UIViewController {
     @IBOutlet var appectTermsAndYesNoEmrDistanceConstraint: NSLayoutConstraint!
     @IBOutlet var yesRadioButtonEmrTextFieldDistance: NSLayoutConstraint!
     
-    //@IBOutlet weak var emrNameTextfieldConstarint: NSLayoutConstraint!
+    var agencyId = 0
     var stateId = 0
     var cityId = 0
+    var isEMRSystem : Bool?
+    var IsClinicalNotes : Bool?
+    var acceptterms : Bool?
+    
     
     let dropDownAgency = DropDown()
     let dropDownState = DropDown()
@@ -64,6 +68,8 @@ class SignUpVC: UIViewController {
     var zipcodeData = [DropdownData]()
     
     var viewModel = signUpViewModel()
+    
+    var agencyDataModel : agencyModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +89,7 @@ class SignUpVC: UIViewController {
             self.agencyTypetextField.selectedTitleColor = UIColor.colorPrimary
             self.agencyTypetextField.textColor = UIColor.colorPrimaryDark
             self.agencyTypetextField.tintColor = UIColor.colorPrimary
+            self.agencyId = Int(self.agencyData[index].id)
         }
     }
     @IBAction func stateTypeAction(_ sender: Any) {
@@ -138,6 +145,7 @@ class SignUpVC: UIViewController {
             sender.setImage(UIImage(named: "RadioSelected"), for: .normal)
             emrNoRadioButton.setImage(UIImage(named: "RadioUnselected"), for: .normal)
             emrNoRadioButton.isSelected = false
+            isEMRSystem = true
             showEMRTextField()
         }
         sender.isSelected = !sender.isSelected
@@ -153,6 +161,7 @@ class SignUpVC: UIViewController {
             sender.setImage(UIImage(named: "RadioSelected"), for: .normal)
             emrYesRadiobutton.setImage(UIImage(named: "RadioUnselected"), for: .normal)
             emrYesRadiobutton.isSelected = false
+            isEMRSystem = false
             showUtilizeHomeHealthProElectronicYesNoView()
         }
         sender.isSelected = !sender.isSelected
@@ -167,6 +176,7 @@ class SignUpVC: UIViewController {
             sender.setImage(UIImage(named: "RadioSelected"), for: .normal)
             homeHealthProElectronicNoRadioButton.setImage(UIImage(named: "RadioUnselected"), for: .normal)
             homeHealthProElectronicNoRadioButton.isSelected = false
+            IsClinicalNotes = true
         }
         sender.isSelected = !sender.isSelected
     }
@@ -180,6 +190,7 @@ class SignUpVC: UIViewController {
             sender.setImage(UIImage(named: "RadioSelected"), for: .normal)
             homeHealthProElectronicYesRadioButton.setImage(UIImage(named: "RadioUnselected"), for: .normal)
             homeHealthProElectronicYesRadioButton.isSelected = false
+            IsClinicalNotes = false
         }
         sender.isSelected = !sender.isSelected
     }
@@ -187,8 +198,10 @@ class SignUpVC: UIViewController {
     @IBAction func termsAndConditionCheckBox(_ sender: UIButton) {
         if sender.isSelected {
             sender.setImage(UIImage(named: "Uncheck"), for: .normal)
+            acceptterms = false
         }else {
             sender.setImage(UIImage(named: "Check"), for: .normal)
+            acceptterms = true
         }
         sender.isSelected = !sender.isSelected
     }
@@ -206,14 +219,20 @@ class SignUpVC: UIViewController {
             Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validConatctPersonName.identifier)
         }else if phoneLandlineNumberTextField.checkEmpty() {
             Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.phoneNumber.identifier)
+        }else if phoneLandlineNumberTextField.phoneNumberValidate() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validPhoneNumber.identifier)
         }else if emailAddressTextField.checkEmpty() {
             Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.emailAddress.identifier)
         }else if emailAddressTextField.validEmail() {
             Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validemail.identifier)
         }else if faxNumberTextField.checkEmpty() {
             Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.faxNumber.identifier)
+        }else if faxNumberTextField.phoneNumberValidate() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validFaxNumber.identifier)
         }else if passwordTextField.checkEmpty() {
             Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.enterPassword.identifier)
+        }else if passwordTextField.validPassword() {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validPassword.identifier)
         }else if addressLineTextField.checkEmpty() {
             Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.addressLine.identifier)
         }else if stateNameTextField.checkEmpty() {
@@ -222,7 +241,27 @@ class SignUpVC: UIViewController {
             Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.city.identifier)
         }else if zipcodeNameTextField.checkEmpty() {
             Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.zipcode.identifier)
+        }else if isEMRSystem == nil{
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.emrSystemSeletion.identifier)
         }
+        
+        if isEMRSystem == true {
+            if emrNameTextField.checkEmpty() {
+                Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.emrSystemName.identifier)
+            }
+        }else {
+            if IsClinicalNotes == nil {
+                Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.clinianNotes.identifier)
+            }
+        }
+        
+        if acceptterms == false {
+            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.termsAndCondition.identifier)
+        }
+        
+        let signUpRequest = SignUpRequest(AgencyName: agencyNameTextField.text!, ContactPersonName: contactPersonNameTextField.text!, Email: emailAddressTextField.text!, ContactNo: contactPersonNameTextField.text!, Fax: faxNumberTextField.text!, AddressLine: addressLineTextField.text!, ZipCode: zipcodeNameTextField.text!, Password: passwordTextField.text!, EMRSystemName: emrNameTextField.text!, AgencyTypeId: agencyId, CityId: cityId, StateId: stateId, IsEMRSystem: isEMRSystem!, IsClinicalNotes: IsClinicalNotes!)
+        
+        
     }
     
     
@@ -361,9 +400,30 @@ extension SignUpVC: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (textField == phoneLandlineNumberTextField) || (textField == faxNumberTextField)  {
+            if textField.text?.count == 12 {
+                textField.text?.removeLast()
+            }
+            if textField.text!.count > 1 {
+                if let formattedNumber = textField.text?.formattedNumber() {
+                    textField.text = formattedNumber
+                }
+            }
+        }
+        return true
+    }
 }
 
 extension SignUpVC: signUpViewModelProtocol {
+    func createdAgency(agencyDataModel: agencyModel) {
+        self.agencyDataModel = agencyDataModel
+        DispatchQueue.main.async {
+            self.dismiss(animated: false, completion: nil)
+        }
+    }
+    
     func zipcodeData(zipcodeData: DropdownDataTypeModel) {
         self.zipcodeData = zipcodeData.data
         dropDownDataSet(dropDown: dropDownZipcode, dropDownView: zipcodeDropDownView, dropDownData: self.zipcodeData)
@@ -380,7 +440,9 @@ extension SignUpVC: signUpViewModelProtocol {
     }
     
     func showMessage(message: String) {
-        Alert().alertOkView(viewController: self, message: message)
+        DispatchQueue.main.async {
+            Alert().alertOkView(viewController: self, message: message)
+        }
     }
     
     func initialAgenctData(agencyData: DropdownDataTypeModel) {

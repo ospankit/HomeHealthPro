@@ -45,6 +45,10 @@
 		BC6DE49E240F8BCC00BE7A6D /* DashBoardNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE49D240F8BCC00BE7A6D /* DashBoardNavigation.swift */; };
 		BC6DE4A0240FA16300BE7A6D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE49F240FA16300BE7A6D /* Constant.swift */; };
 		BC6DE4AC240FF00900BE7A6D /* MainContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DE4AB240FF00900BE7A6D /* MainContainerController.swift */; };
+		BC73EE612422402A00913F26 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73EE602422402A00913F26 /* ForgetPasswordViewModel.swift */; };
+		BC73EE632422418900913F26 /* ForgetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73EE622422418900913F26 /* ForgetPasswordModel.swift */; };
+		BC73EE6A24225A8500913F26 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC73EE6924225A8500913F26 /* ResetPassword.storyboard */; };
+		BC73EE6C24225AD200913F26 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC73EE6B24225AD200913F26 /* ResetPasswordVC.swift */; };
 		BC793F8624079A9200AD2D47 /* ForgetPasswordVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793F8524079A9200AD2D47 /* ForgetPasswordVc.swift */; };
 		BC793F8A2407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793F892407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift */; };
 		BC793F8C2407C5D500AD2D47 /* StoryboardIndentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */; };
@@ -134,6 +138,10 @@
 		BC6DE49D240F8BCC00BE7A6D /* DashBoardNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardNavigation.swift; sourceTree = "<group>"; };
 		BC6DE49F240FA16300BE7A6D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BC6DE4AB240FF00900BE7A6D /* MainContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerController.swift; sourceTree = "<group>"; };
+		BC73EE602422402A00913F26 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
+		BC73EE622422418900913F26 /* ForgetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModel.swift; sourceTree = "<group>"; };
+		BC73EE6924225A8500913F26 /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
+		BC73EE6B24225AD200913F26 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		BC793F8524079A9200AD2D47 /* ForgetPasswordVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVc.swift; sourceTree = "<group>"; };
 		BC793F892407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewcontrollerIndentifiers.swift; sourceTree = "<group>"; };
 		BC793F8B2407C5D500AD2D47 /* StoryboardIndentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIndentifiers.swift; sourceTree = "<group>"; };
@@ -599,6 +607,7 @@
 		BC5A91172406989600682179 /* AgentAndStaff */ = {
 			isa = PBXGroup;
 			children = (
+				BC73EE6424225A2E00913F26 /* ResetPassword */,
 				BC1CD4E42418F22400D7247D /* ChangePasswordModule */,
 				BC1CD4DC2418EEC700D7247D /* ScheduleVisitModule */,
 				BCE3085B241651CD00BBDBF1 /* patientsModule */,
@@ -752,6 +761,47 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BC73EE6424225A2E00913F26 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				BC73EE6924225A8500913F26 /* ResetPassword.storyboard */,
+				BC73EE6824225A5900913F26 /* Controller */,
+				BC73EE6724225A5100913F26 /* ViewModel */,
+				BC73EE6624225A4A00913F26 /* View */,
+				BC73EE6524225A3E00913F26 /* Model */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		BC73EE6524225A3E00913F26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC73EE6624225A4A00913F26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC73EE6724225A5100913F26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC73EE6824225A5900913F26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC73EE6B24225AD200913F26 /* ResetPasswordVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		BC793F7E2407924D00AD2D47 /* UsersModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -778,6 +828,7 @@
 		BC793F8024079A0300AD2D47 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC73EE622422418900913F26 /* ForgetPasswordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -792,6 +843,7 @@
 		BC793F8324079A2D00AD2D47 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BC73EE602422402A00913F26 /* ForgetPasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1180,6 +1232,7 @@
 				BCE3085D2416522E00BBDBF1 /* patients.storyboard in Resources */,
 				BC5A912824069CF900682179 /* Login.storyboard in Resources */,
 				BC1CD4E62418F2C900D7247D /* ChangePassword.storyboard in Resources */,
+				BC73EE6A24225A8500913F26 /* ResetPassword.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1318,9 +1371,11 @@
 				BCAC0B58240D44ED000A1720 /* DashBoardSideMenuVC.swift in Sources */,
 				BCE1FA2C241BC03100E9D7F1 /* RemoteHelper.swift in Sources */,
 				BC3675012407DE71006EC471 /* SkyFloatingLabelTextField.swift in Sources */,
+				BC73EE6C24225AD200913F26 /* ResetPasswordVC.swift in Sources */,
 				BC1CD4DB2418E57700D7247D /* OTPVC.swift in Sources */,
 				BCE1FA2A241BC00D00E9D7F1 /* ApiManager.swift in Sources */,
 				BCE1FA2F241BC59100E9D7F1 /* UrlConstant.swift in Sources */,
+				BC73EE612422402A00913F26 /* ForgetPasswordViewModel.swift in Sources */,
 				BC59C227241642710083D7C3 /* DocumentCollectionViewCell.swift in Sources */,
 				BCE1FA33241BCD3D00E9D7F1 /* LoginModel.swift in Sources */,
 				BC793F8A2407C3A300AD2D47 /* ViewcontrollerIndentifiers.swift in Sources */,
@@ -1346,6 +1401,7 @@
 				BCAC0B4F240D111B000A1720 /* DashBoardCollectionViewCell.swift in Sources */,
 				BCE308662416706A00BBDBF1 /* PatientsDetailsTableCell.swift in Sources */,
 				BCE30864241652D000BBDBF1 /* AssignedPatients.swift in Sources */,
+				BC73EE632422418900913F26 /* ForgetPasswordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

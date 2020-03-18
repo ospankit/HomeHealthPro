@@ -97,7 +97,9 @@ extension LoginVc: UITextFieldDelegate {
 
 extension LoginVc: LoginViewModelProtocol {
     func showMessage(message: String) {
-        Alert().alertOkView(viewController: self, message: message)
+        DispatchQueue.main.async {
+            Alert().alertOkView(viewController: self, message: message)
+        }
     }
     
     func loginSucess() {

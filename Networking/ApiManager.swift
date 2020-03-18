@@ -70,12 +70,13 @@ class ApiManager {
                             case 401:
                                 //make applogOut
                                 completion(.failure(.errorMsg(message: ResponseError.unauthorizedError.errorDescription ?? "Unauthorized error")))
-                                return
+                                break
                             case 404:
                                 completion(.failure(.errorMsg(message: ResponseError.notFound.errorDescription ?? "Not Found")))
-                                return
+                                break
                             case 500:
                                 completion(.failure(.errorMsg(message: ResponseError.internalServerError.errorDescription ?? "Internal Server Error")))
+                                break
                             default:break
                             }
                         }

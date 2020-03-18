@@ -27,6 +27,13 @@ enum ReuseAbleIdentifier {
     case validemail
     case validAgencyName
     case validConatctPersonName
+    case validPassword
+    case validPhoneNumber
+    case validFaxNumber
+    case emrSystemSeletion
+    case clinianNotes
+    case emrSystemName
+    case termsAndCondition
 }
 
 extension ReuseAbleIdentifier {
@@ -50,6 +57,13 @@ extension ReuseAbleIdentifier {
         case .validemail: return "Please enter valid Email Address."
         case .validAgencyName: return "Please enter valid Agency Name."
         case .validConatctPersonName: return "Please enter valid Conatct Person Name."
+        case .validPassword: return "Password must be 8 Character long and must contain at least one uppercase character, one lowercase character, one number and one alphanumeric character."
+        case .validPhoneNumber: return "Please enter valid Phone Number."
+        case .validFaxNumber: return "Please enter valid Fax Number."
+        case .emrSystemSeletion: return "Please select Yes/No of EMR System."
+        case .clinianNotes: return "Please select Yes/No of clinicain notes."
+        case .emrSystemName: return "Please enter EMR System name."
+        case .termsAndCondition: return "Please select terms and condition check box."
         }
     }
 }

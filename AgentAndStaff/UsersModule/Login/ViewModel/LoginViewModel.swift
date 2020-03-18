@@ -28,7 +28,7 @@ class LoginViewModel {
             case .success(let resp):
                 if !resp.status{
                     self.delegate?.showMessage(message: ResponseError.unKnownError.errorDescription ?? "unknown error")
-                    return
+                    break
                 }
                 self.loginResponse = resp
                 self.delegate?.loginSucess()

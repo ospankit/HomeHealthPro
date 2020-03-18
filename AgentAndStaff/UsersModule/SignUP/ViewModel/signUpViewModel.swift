@@ -23,6 +23,7 @@ protocol signUpViewModelProtocol {
     func initialStateData(stateData:DropdownDataTypeModel)
     func cityData(cityData:DropdownDataTypeModel)
     func zipcodeData(zipcodeData:DropdownDataTypeModel)
+    func createdAgency(agencyDataModel:agencyModel)
 }
 
 class signUpViewModel{
@@ -32,6 +33,8 @@ class signUpViewModel{
     private(set) var stateData:DropdownDataTypeModel?
     private(set) var cityData:DropdownDataTypeModel?
     private(set) var zipcodeData:DropdownDataTypeModel?
+    private(set) var signUpResponse:agencyModel?
+    
     
     func getDropdownListData(for type: RequestType, param:masterList) {
         delegate?.showActivityIndicator()
@@ -61,39 +64,23 @@ class signUpViewModel{
         }
     }
     
-//    func getInitialstateData(param:masterList) {
-//        delegate?.showActivityIndicator()
-//        ApiManager.shared.fetchData(endpoints: .masterList, isAuthRequired: false, methodType: .post, param: param) { (response:Result<AgencyTypeModel,ApiError>) in
-//            self.delegate?.hideActivityIndicator()
-//            switch response {
-//            case .success(let resp):
-//                if !resp.status{
-//                   self.delegate?.showMessage(message: ResponseError.unKnownError.errorDescription ?? "unknown error")
-//                }
-//
-//            case .failure(let error):
-//                self.delegate?.showMessage(message: error.localizedDescription)
-//            }
-//        }
-//    }
-//
-//    func getCityData(param:masterList){
-//        delegate?.showActivityIndicator()
-//        ApiManager.shared.fetchData(endpoints: .masterList, isAuthRequired: false, methodType: .post, param: param) { (response:Result<AgencyTypeModel,ApiError>) in
-//            self.delegate?.hideActivityIndicator()
-//            switch response {
-//            case .success(let resp):
-//                if !resp.status{
-//                    self.delegate?.showMessage(message: ResponseError.unKnownError.errorDescription ?? "unknown error")
-//                }
-//
-//            case .failure(let error):
-//                self.delegate?.showMessage(message: error.localizedDescription)
-//            }
-//        }
-//    }
-    
-    //func getZipCodeData()
+    func signUpAgency(param:SignUpRequest) {
+        delegate?.showActivityIndicator()
+        ApiManager.shared.fetchData(endpoints: .agencyAdd, isAuthRequired: false, methodType: .post, param: param) { (response:Result<agencyModel,ApiError>) in
+            self.delegate?.hideActivityIndicator()
+            switch response {
+            case.success(let resp):
+                if !resp.status {
+                    self.delegate?.showMessage(message: resp.message)
+                    break
+                }
+                self.signUpResponse = resp
+                self.delegate?.createdAgency(agencyDataModel: resp)
+            case .failure(let error):
+                self.delegate?.showMessage(message: error.localizedDescription)
+            }
+        }
+    }
     
 }
 

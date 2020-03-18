@@ -11,6 +11,8 @@ import Foundation
 enum UrlConstant {
     case loginUrl
     case masterList
+    case agencyAdd
+    case forgetPassword
 }
 
 extension UrlConstant {
@@ -18,6 +20,8 @@ extension UrlConstant {
         switch self {
         case .loginUrl: return "auth/token"
         case .masterList: return "masterlist"
+        case .agencyAdd: return "agency/add"
+        case .forgetPassword: return "user/password/forgot"
         }
     }
 }

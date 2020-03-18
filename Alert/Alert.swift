@@ -15,4 +15,12 @@ class Alert{
         alert.addAction(UIAlertAction(title: ReuseAbleIdentifier.OK.identifier, style: .default, handler: nil))
         viewController.present(alert, animated: true, completion: nil)
     }
+    
+    func alertOKViewWithActionViewDissmiss(viewController:UIViewController,message:String) {
+        let alert = UIAlertController(title: ReuseAbleIdentifier.AppNameIdentifier.identifier, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: ReuseAbleIdentifier.OK.identifier, style: .default, handler: nil))
+        viewController.present(alert, animated: true) {
+            viewController.dismiss(animated: false, completion: nil)
+        }
+    }
 }

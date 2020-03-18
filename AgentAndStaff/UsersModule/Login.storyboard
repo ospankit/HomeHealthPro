@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye3-Ej-mEY" userLabel="loginView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="569"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo in Png" translatesAutoresizingMaskIntoConstraints="NO" id="q21-Kf-v2K" userLabel="LoginLogoImageView">
                                                 <rect key="frame" x="78.666666666666671" y="50" width="217.66666666666663" height="127"/>
@@ -76,7 +76,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GK-T7-Xpa">
-                                                <rect key="frame" x="124" y="448" width="127" height="33"/>
+                                                <rect key="frame" x="118" y="448" width="139" height="32"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                                 <state key="normal" title="Forget Password?"/>
                                                 <connections>
@@ -84,13 +84,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUI-SA-erU">
-                                                <rect key="frame" x="65.333333333333329" y="499" width="184.33333333333337" height="20"/>
+                                                <rect key="frame" x="58" y="498" width="199" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmE-f6-Vti">
-                                                <rect key="frame" x="253.66666666666663" y="492.66666666666663" width="61" height="33"/>
+                                                <rect key="frame" x="261" y="492" width="62" height="32"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
                                                 <state key="normal" title="Sign Up"/>
                                                 <connections>
@@ -176,7 +176,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YT-SE-zJI" userLabel="forgetPasswordView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="523.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="521.33333333333337"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Forget Password" translatesAutoresizingMaskIntoConstraints="NO" id="Qc5-2U-thO">
                                                 <rect key="frame" x="93.666666666666671" y="50.000000000000007" width="187.66666666666663" height="121.66666666666669"/>
@@ -188,13 +188,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Email Address and we'll send you a link to reset your password." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS3-Jj-nyk">
-                                                <rect key="frame" x="30" y="239.66666666666666" width="315" height="40.666666666666657"/>
+                                                <rect key="frame" x="30" y="239.66666666666666" width="315" height="39.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yp4-aC-Csu">
-                                                <rect key="frame" x="30" y="300.33333333333331" width="315" height="50"/>
+                                                <rect key="frame" x="30" y="299.33333333333331" width="315" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="xqX-N1-vbb"/>
                                                 </constraints>
@@ -205,7 +205,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhE-9m-dAr">
-                                                <rect key="frame" x="30" y="370.33333333333331" width="315" height="50"/>
+                                                <rect key="frame" x="30" y="369.33333333333331" width="315" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
                                                 <state key="normal" title="Reset Password">
@@ -216,7 +216,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beh-HY-bYP">
-                                                <rect key="frame" x="116.66666666666669" y="440.33333333333331" width="142" height="33"/>
+                                                <rect key="frame" x="109.66666666666669" y="439.33333333333331" width="156" height="32"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                                 <state key="normal" title="Back to login screen"/>
                                                 <connections>
@@ -292,7 +292,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMt-xd-aPl">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="526.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="523.66666666666663"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFG-M3-OhC">
                                                 <rect key="frame" x="16" y="16" width="30" height="30"/>
@@ -306,22 +306,22 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOW-Yf-imw">
-                                                <rect key="frame" x="93.666666666666671" y="80" width="187.66666666666663" height="79"/>
+                                                <rect key="frame" x="93.666666666666671" y="80" width="187.66666666666663" height="78.666666666666686"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Verification" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqD-QY-FIB">
-                                                <rect key="frame" x="96" y="183" width="183" height="26.333333333333343"/>
+                                                <rect key="frame" x="99.000000000000014" y="182.66666666666666" width="177.33333333333337" height="25.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your OTP code here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AC-7w-0JQ">
-                                                <rect key="frame" x="112.66666666666667" y="217.33333333333331" width="149.66666666666663" height="17"/>
+                                                <rect key="frame" x="106" y="216.33333333333331" width="163" height="16.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44b-iB-l7X">
-                                                <rect key="frame" x="143" y="319.33333333333331" width="89" height="33"/>
+                                                <rect key="frame" x="139" y="317.66666666666669" width="97" height="32"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                                 <state key="normal" title="Resend OTP"/>
                                                 <connections>
@@ -329,7 +329,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clz-zy-BSN">
-                                                <rect key="frame" x="16" y="376.33333333333331" width="343" height="50"/>
+                                                <rect key="frame" x="16" y="373.66666666666669" width="343" height="50"/>
                                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="xje-d6-alO"/>
@@ -343,7 +343,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="R1o-P7-eM2">
-                                                <rect key="frame" x="55" y="259.33333333333331" width="265" height="40"/>
+                                                <rect key="frame" x="55" y="257.66666666666669" width="265" height="40"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ha8-YI-EMx">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -750,13 +750,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P90-lw-83q">
-                                                <rect key="frame" x="48" y="800" width="24" height="20"/>
+                                                <rect key="frame" x="48" y="800.66666666666663" width="24" height="18.666666666666629"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc7-1y-bVT">
-                                                <rect key="frame" x="108" y="800" width="20" height="20"/>
+                                                <rect key="frame" x="108" y="800.66666666666663" width="20" height="18.666666666666629"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -814,13 +814,13 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMZ-b6-hKk">
-                                                        <rect key="frame" x="28" y="42.333333333333371" width="24" height="20"/>
+                                                        <rect key="frame" x="28" y="43" width="24" height="18.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hh-8z-wkn">
-                                                        <rect key="frame" x="88" y="42.333333333333371" width="20" height="20"/>
+                                                        <rect key="frame" x="88" y="43" width="20" height="18.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
