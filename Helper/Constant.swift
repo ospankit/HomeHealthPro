@@ -65,3 +65,15 @@ extension imageConstant {
         }
     }
 }
+
+enum NumberConstant {
+    case pageSize
+}
+
+extension NumberConstant {
+    var identifier:Int {
+        switch self {
+            case .pageSize: return 10
+        }
+    }
+}

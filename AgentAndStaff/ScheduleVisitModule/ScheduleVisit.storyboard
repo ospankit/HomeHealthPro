@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,7 +68,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qal-Pb-Pwy">
                                                         <rect key="frame" x="8" y="14" width="382" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -140,7 +140,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbx-8D-j8Z">
                                                         <rect key="frame" x="8" y="14" width="382" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,7 +193,7 @@
                                                         <rect key="frame" x="8" y="15" width="178.5" height="20"/>
                                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -221,7 +221,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28L-Tb-621">
                                                         <rect key="frame" x="8" y="14" width="178.5" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -257,7 +257,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL2-6u-LOJ">
                                                         <rect key="frame" x="8" y="14" width="382" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -713,7 +713,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxK-qF-dRg">
                                                         <rect key="frame" x="8" y="14" width="382" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="2"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -741,7 +741,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2y-cQ-TGz">
                                                         <rect key="frame" x="8" y="14" width="178.5" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="2"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -769,7 +769,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqR-WE-dg2">
                                                         <rect key="frame" x="8" y="14" width="178.5" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="2"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -797,7 +797,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbe-Il-67z">
                                                         <rect key="frame" x="8" y="14" width="178.5" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="2"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -825,7 +825,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwI-Km-3r2">
                                                         <rect key="frame" x="8" y="14" width="178.5" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="2"/>
-                                                        <state key="normal" image="Dropdown_1x"/>
+                                                        <state key="normal" image="Dropdown"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1017,6 +1017,6 @@
     <resources>
         <image name="Back" width="22" height="37"/>
         <image name="Date of Birth" width="36" height="36"/>
-        <image name="Dropdown_1x" width="22" height="12"/>
+        <image name="Dropdown" width="22" height="12"/>
     </resources>
 </document>

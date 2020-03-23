@@ -13,6 +13,12 @@ enum UrlConstant {
     case masterList
     case agencyAdd
     case forgetPassword
+    case verifyOTP
+    case resendOTP
+    case agencyDashboard
+    case logout
+    case clinicianList
+    case patientList
 }
 
 extension UrlConstant {
@@ -22,6 +28,12 @@ extension UrlConstant {
         case .masterList: return "masterlist"
         case .agencyAdd: return "agency/add"
         case .forgetPassword: return "user/password/forgot"
+        case .verifyOTP: return "auth/otp/verify"
+        case .resendOTP: return "auth/otp/resend"
+        case .agencyDashboard: return "agency/dashboard"
+        case .logout: return "user/logout"
+        case .clinicianList: return "clinician/list"
+        case .patientList: return "patient/list"
         }
     }
 }

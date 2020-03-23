@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class Alert{
+    
+    static let sharedInstance = Alert()
+    
     func alertOkView(viewController:UIViewController,message:String) {
         let alert = UIAlertController(title: ReuseAbleIdentifier.AppNameIdentifier.identifier, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: ReuseAbleIdentifier.OK.identifier, style: .default, handler: nil))

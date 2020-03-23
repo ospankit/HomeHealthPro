@@ -14,7 +14,11 @@ class DashBoardCollectionViewCell: UICollectionViewCell {
     
     func dashboardCollectionViewInitialSetting() {
         dashBoardCountButton.addBorderWithCircleColor(width: 2)
-        dashBoardCountButton.makeCornerRadius(raidus: dashBoardCountButton.frame.size.height/2.2)
+        if self.frame.size.height > 200 {
+            dashBoardCountButton.makeCornerRadius(raidus: dashBoardCountButton.frame.size.height/2)
+        }else{
+            dashBoardCountButton.makeCornerRadius(raidus: dashBoardCountButton.frame.size.height/2.2)
+        }
         dashBoardCountButton.isUserInteractionEnabled = false
         tintColor = UIColor.colorPrimary
         backgroundColor = UIColor.white

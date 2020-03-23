@@ -208,55 +208,55 @@ class SignUpVC: UIViewController {
     
     @IBAction func signUpAction(_ sender: UIButton) {
         if agencyNameTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.agencyName.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.agencyName.identifier)
         }else if agencyNameTextField.validText() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validAgencyName.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.validAgencyName.identifier)
         }else if agencyTypetextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.agencyType.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.agencyType.identifier)
         }else if contactPersonNameTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.contactPerson.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.contactPerson.identifier)
         }else if contactPersonNameTextField.validText() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validConatctPersonName.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.validConatctPersonName.identifier)
         }else if phoneLandlineNumberTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.phoneNumber.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.phoneNumber.identifier)
         }else if phoneLandlineNumberTextField.phoneNumberValidate() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validPhoneNumber.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.validPhoneNumber.identifier)
         }else if emailAddressTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.emailAddress.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.emailAddress.identifier)
         }else if emailAddressTextField.validEmail() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validemail.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.validemail.identifier)
         }else if faxNumberTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.faxNumber.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.faxNumber.identifier)
         }else if faxNumberTextField.phoneNumberValidate() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validFaxNumber.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.validFaxNumber.identifier)
         }else if passwordTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.enterPassword.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.enterPassword.identifier)
         }else if passwordTextField.validPassword() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validPassword.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.validPassword.identifier)
         }else if addressLineTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.addressLine.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.addressLine.identifier)
         }else if stateNameTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.state.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.state.identifier)
         }else if cityNameTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.city.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.city.identifier)
         }else if zipcodeNameTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.zipcode.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.zipcode.identifier)
         }else if isEMRSystem == nil{
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.emrSystemSeletion.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.emrSystemSeletion.identifier)
         }
         
         if isEMRSystem == true {
             if emrNameTextField.checkEmpty() {
-                Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.emrSystemName.identifier)
+                Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.emrSystemName.identifier)
             }
         }else {
             if IsClinicalNotes == nil {
-                Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.clinianNotes.identifier)
+                Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.clinianNotes.identifier)
             }
         }
         
         if acceptterms == false {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.termsAndCondition.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.termsAndCondition.identifier)
         }
         
         let signUpRequest = SignUpRequest(AgencyName: agencyNameTextField.text!, ContactPersonName: contactPersonNameTextField.text!, Email: emailAddressTextField.text!, ContactNo: contactPersonNameTextField.text!, Fax: faxNumberTextField.text!, AddressLine: addressLineTextField.text!, ZipCode: zipcodeNameTextField.text!, Password: passwordTextField.text!, EMRSystemName: emrNameTextField.text!, AgencyTypeId: agencyId, CityId: cityId, StateId: stateId, IsEMRSystem: isEMRSystem!, IsClinicalNotes: IsClinicalNotes!)
@@ -441,7 +441,7 @@ extension SignUpVC: signUpViewModelProtocol {
     
     func showMessage(message: String) {
         DispatchQueue.main.async {
-            Alert().alertOkView(viewController: self, message: message)
+            Alert.sharedInstance.alertOkView(viewController: self, message: message)
         }
     }
     
@@ -451,10 +451,14 @@ extension SignUpVC: signUpViewModelProtocol {
     }
     
     func showActivityIndicator() {
-        //show indicator
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.showIndicator(view: self)
+        }
     }
     
     func hideActivityIndicator() {
-        // hide indicator
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.hideActivity()
+        }
     }
 }

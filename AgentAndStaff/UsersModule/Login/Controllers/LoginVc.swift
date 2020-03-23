@@ -9,6 +9,7 @@
 //bJKLV3J2AWDJch-Lz_Y8
 
 import UIKit
+import NVActivityIndicatorView
 
 class LoginVc: UIViewController {
 
@@ -44,11 +45,11 @@ class LoginVc: UIViewController {
     
     @IBAction func signInAction(_ sender: UIButton) {
         guard let username = loginUserNameTextField.text , !username.isEmpty else {
-            Alert().alertOkView(viewController:self,message:ReuseAbleIdentifier.enterUsername.identifier)
+            Alert.sharedInstance.alertOkView(viewController:self,message:ReuseAbleIdentifier.enterUsername.identifier)
             return
         }
         guard let password = loginPasswordTextField.text , !password.isEmpty else {
-            Alert().alertOkView(viewController:self,message:ReuseAbleIdentifier.enterPassword.identifier)
+            Alert.sharedInstance.alertOkView(viewController:self,message:ReuseAbleIdentifier.enterPassword.identifier)
             return
         }
         let loginRequest = LoginRequest(Email: username, Password: password, IsWebLogin: false)
@@ -98,11 +99,12 @@ extension LoginVc: UITextFieldDelegate {
 extension LoginVc: LoginViewModelProtocol {
     func showMessage(message: String) {
         DispatchQueue.main.async {
-            Alert().alertOkView(viewController: self, message: message)
+            Alert.sharedInstance.alertOkView(viewController: self, message: message)
         }
     }
     
     func loginSucess() {
+        GeneralUserDefaultsManager.sharedInstance.userId = viewModel.loginResponse?.userID ?? ""
         DispatchQueue.main.async {
             let vc = self.storyboard?.instantiateViewController(identifier: Controller.OTPVC.identifier) as! OTPVC
             vc.modalPresentationStyle = .fullScreen
@@ -112,13 +114,13 @@ extension LoginVc: LoginViewModelProtocol {
     
     func showActivityIndicator() {
         DispatchQueue.main.async {
-            //add indicator
+            ActivityIndicator.shared.showIndicator(view: self)
         }
     }
     
     func hideActivityIndicator() {
         DispatchQueue.main.async {
-            //remove indicator
+            ActivityIndicator.shared.hideActivity()
         }
     }
     

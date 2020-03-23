@@ -15,9 +15,14 @@ class AssignedPatients: UIViewController {
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var patientsTitleLabel: UILabel!
     @IBOutlet weak var patientsSearchTextField: UITextField!
+    
+    let viewModel = AssignedPatientsViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSettingOfAssignedPatients()
+        viewModel.delegate = self
+        viewModel.getPatinetData()
         // Do any additional setup after loading the view.
     }
 
@@ -64,17 +69,47 @@ extension AssignedPatients {
 
 extension AssignedPatients: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.patientResponseData?.data.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Controller.PatientsDetailsTableCell.identifier) as! PatientsDetailsTableCell
         cell.initialSettingOfPatientsDetailsTableCell()
+        if viewModel.patientResponseData?.data != nil {
+            cell.setData(data: (viewModel.patientResponseData?.data[indexPath.row])!)
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+}
+
+extension AssignedPatients : AssignedPatientsViewModelProtocol {
+    func showActivityIndicator() {
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.showIndicator(view: self)
+        }
+    }
+    
+    func hideActivityIndicator() {
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.hideActivity()
+        }
+    }
+    
+    func showMessage(message: String) {
+        DispatchQueue.main.async {
+            Alert.sharedInstance.alertOkView(viewController: self, message: message)
+        }
+    }
+    
+    func patientDetailsSucess() {
+        DispatchQueue.main.async {
+            self.patientsDetailsTableView.reloadData()
+        }
     }
     
 }

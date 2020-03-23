@@ -34,6 +34,7 @@ enum ReuseAbleIdentifier {
     case clinianNotes
     case emrSystemName
     case termsAndCondition
+    case enterOTP
 }
 
 extension ReuseAbleIdentifier {
@@ -64,6 +65,7 @@ extension ReuseAbleIdentifier {
         case .clinianNotes: return "Please select Yes/No of clinicain notes."
         case .emrSystemName: return "Please enter EMR System name."
         case .termsAndCondition: return "Please select terms and condition check box."
+        case .enterOTP: return "Please enter OTP."
         }
     }
 }

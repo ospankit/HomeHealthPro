@@ -21,20 +21,36 @@ class OTPVC: UIViewController {
     @IBOutlet weak var phoneVerificationLabel: UILabel!
     @IBOutlet weak var enterOTPLabel: UILabel!
     
+    var viewModel = OTPViewModel()
+    
+    var otpData : OTPModel?
+    
     @IBOutlet weak var continueButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSettingOfOTPVC()
+        viewModel.delegate = self
         // Do any additional setup after loading the view.
     }
     
     @IBAction func continueButtonAction(_ sender: Any) {
-        let vc = UIStoryboard.init(name: StoryBoard.Dashboard.indentifier, bundle: nil).instantiateViewController(identifier: Controller.MainContainerController.identifier) as! MainContainerController
+        
+        /*let vc = UIStoryboard.init(name: StoryBoard.Dashboard.indentifier, bundle: nil).instantiateViewController(identifier: Controller.MainContainerController.identifier) as! MainContainerController
         UIApplication.shared.windows.first?.rootViewController = vc
-        UIApplication.shared.windows.first?.makeKeyAndVisible()
+        UIApplication.shared.windows.first?.makeKeyAndVisible()*/
+        
+        if (otpTextField1.checkEmpty() || otpTextField2.checkEmpty() || otpTextField3.checkEmpty() || otpTextField4.checkEmpty() || otpTextField5.checkEmpty() || otpTextField6.checkEmpty()) {
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.enterOTP.identifier)
+            return
+        }
+        let otp = "\(otpTextField1.text!)" + "\(otpTextField2.text!)" + "\(otpTextField3.text!)" + "\(otpTextField4.text!)" + "\(otpTextField5.text!)" + "\(otpTextField6.text!)"
+        let verifyOTPRequest = OTPCheckRequest(Otp:otp,UserId: GeneralUserDefaultsManager.sharedInstance.userId)
+        viewModel.checkOTP(param: verifyOTPRequest)
     }
     
     @IBAction func resendOTPButtonAction(_ sender: Any) {
+        let resendOTPRequest = OTPResendRequest(UserId: GeneralUserDefaultsManager.sharedInstance.userId)
+        viewModel.resendOTP(param: resendOTPRequest)
     }
     
     @IBAction func otpBackButtonAction(_ sender: Any) {
@@ -76,32 +92,88 @@ extension OTPVC {
 extension OTPVC : UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if (textField.text!.count < 1  && string.count > 0){
-            let nextTag = textField.tag + 1;
-
-            // get next responder
-            var nextResponder = textField.superview?.viewWithTag(nextTag);
-
-            if (nextResponder == nil){
-                nextResponder = textField.superview?.viewWithTag(1);
+            if textField == otpTextField1{
+                otpTextField2.becomeFirstResponder()
             }
-            textField.text = string;
-            nextResponder?.becomeFirstResponder();
-            return false;
+            if textField == otpTextField2{
+                otpTextField3.becomeFirstResponder()
+            }
+            if textField == otpTextField3{
+                otpTextField4.becomeFirstResponder()
+            }
+            if textField == otpTextField4{
+                otpTextField5.becomeFirstResponder()
+            }
+            if textField == otpTextField5{
+                otpTextField6.becomeFirstResponder()
+            }
+            if textField == otpTextField6{
+                otpTextField6.resignFirstResponder()
+            }
+            textField.text = string
+            return false
         }
         else if (textField.text!.count >= 1  && string.count == 0){
-            // on deleteing value from Textfield
-            let previousTag = textField.tag - 1;
-
-            // get next responder
-            var previousResponder = textField.superview?.viewWithTag(previousTag);
-
-            if (previousResponder == nil){
-                previousResponder = textField.superview?.viewWithTag(1);
+            if textField == otpTextField1{
+                otpTextField1.resignFirstResponder()
             }
-            textField.text = "";
-            previousResponder?.becomeFirstResponder();
-            return false;
+            if textField == otpTextField2{
+                otpTextField1.becomeFirstResponder()
+            }
+            if textField == otpTextField3{
+                otpTextField2.becomeFirstResponder()
+            }
+            if textField == otpTextField4{
+                otpTextField3.becomeFirstResponder()
+            }
+            if textField == otpTextField5{
+                otpTextField4.becomeFirstResponder()
+            }
+            if textField == otpTextField6{
+                otpTextField5.becomeFirstResponder()
+            }
+            textField.text = ""
+            return false
+        }else if (textField.text!.count >= 1) {
+            textField.text = string
+            return false
         }
-        return true;
+        return true
     }
+}
+
+extension OTPVC : OTPViewModelProtocol {
+    func showActivityIndicator() {
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.showIndicator(view: self)
+        }
+    }
+    
+    func hideActivityIndicator() {
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.hideActivity()
+        }
+    }
+    
+    func showMessage(message: String) {
+        DispatchQueue.main.async {
+            Alert.sharedInstance.alertOkView(viewController: self, message: message)
+        }
+    }
+    
+    func validOTP() {
+        DispatchQueue.main.async {
+            let vc = UIStoryboard.init(name: StoryBoard.Dashboard.indentifier, bundle: nil).instantiateViewController(identifier: Controller.MainContainerController.identifier) as! MainContainerController
+            UIApplication.shared.windows.first?.rootViewController = vc
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+        }
+    }
+    
+    func sucessResendOTP(message: String) {
+        DispatchQueue.main.async {
+            Alert.sharedInstance.alertOkView(viewController: self, message: message)
+        }
+    }
+    
+    
 }

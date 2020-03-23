@@ -73,6 +73,15 @@ extension String {
         }
         return result
     }
+    
+    func noBackwardSlashToForward() ->String {
+        let sendString = self.replacingOccurrences(of: "\\", with: "/" )
+        return sendString
+    }
+    func spaceTo() ->String {
+        let sendString = self.replacingOccurrences(of: " ", with: "%20" )
+        return sendString
+    }
 }
 
 extension UIView {
@@ -102,7 +111,7 @@ extension UIView {
         if !verticalFlag
         {
             gradient.startPoint = CGPoint.zero
-            gradient.endPoint = CGPoint(x: 1, y: 0)
+            gradient.endPoint = CGPoint(x: 1, y: 0.0)
         }
         
         layer.insertSublayer(gradient, at: 0)
@@ -162,8 +171,9 @@ extension UIButton {
     
     func addBorderWithGraigent(startColor colorOne: UIColor, endColor colorTwo: UIColor){
         DispatchQueue.main.async {
-            self.layer.cornerRadius = self.frame.height/2
+            self.layer.masksToBounds = true
             self.clipsToBounds = true
+            self.layer.cornerRadius = self.frame.height/2
             
             let gradient = CAGradientLayer()
             gradient.frame =  CGRect(origin: CGPoint.zero, size: self.frame.size)
@@ -171,12 +181,13 @@ extension UIButton {
 
             let shape = CAShapeLayer()
             shape.lineWidth = 4
-            shape.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius).cgPath
+            shape.path = UIBezierPath(roundedRect: self.frame, cornerRadius: self.layer.cornerRadius).cgPath
             shape.strokeColor = UIColor.black.cgColor
             shape.fillColor = UIColor.clear.cgColor
             gradient.mask = shape
 
             self.layer.addSublayer(gradient)
+            self.layoutIfNeeded()
         }
     }
 }

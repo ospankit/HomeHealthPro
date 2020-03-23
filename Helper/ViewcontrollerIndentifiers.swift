@@ -31,6 +31,7 @@ enum Controller {
     case ScheduleVisitPageViewController
     case ScheduleVisitDetailVC
     case ResetPasswordVC
+    case SearchVC
 }
 
 extension Controller {
@@ -58,6 +59,7 @@ extension Controller {
         case .ScheduleVisitPageViewController: return "ScheduleVisitPageViewController"
         case .ScheduleVisitDetailVC: return "ScheduleVisitDetailVC"
         case .ResetPasswordVC: return "ResetPasswordVC"
+        case .SearchVC: return "SearchVC"
         }
     }
 }

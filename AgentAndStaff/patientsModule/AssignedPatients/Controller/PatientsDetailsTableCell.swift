@@ -39,6 +39,16 @@ class PatientsDetailsTableCell: UITableViewCell {
         scheduleVisitButton.addBorderWithGraigent(startColor: .startGradientColor, endColor: .endGradientColor)
     }
     
+    func setData(data:PatientData) {
+        patientNameLabel.text = data.name
+        clinicianLabel.text = data.patientType
+        contactLabel.text = data.phone
+        emailLabel.text = data.email
+        dateOfBirthLabel.text = data.dob
+        genderLabel.text = data.gender
+        zipCodeLabel.text = data.zipcode
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

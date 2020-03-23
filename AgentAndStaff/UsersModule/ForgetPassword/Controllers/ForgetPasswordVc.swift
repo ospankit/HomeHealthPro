@@ -30,9 +30,9 @@ class ForgetPasswordVc: UIViewController {
     
     @IBAction func resetPasswordAction(_ sender: UIButton) {
         if forgetPasswordEmailAddressTextField.checkEmpty() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.emailAddress.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.emailAddress.identifier)
         }else if forgetPasswordEmailAddressTextField.validEmail() {
-            Alert().alertOkView(viewController: self, message: ReuseAbleIdentifier.validemail.identifier)
+            Alert.sharedInstance.alertOkView(viewController: self, message: ReuseAbleIdentifier.validemail.identifier)
         }
         
         let forgetPasswordRequest = ForgetPasswordRequest(Email: forgetPasswordEmailAddressTextField.text!)
@@ -78,21 +78,25 @@ extension ForgetPasswordVc: UITextFieldDelegate {
 extension ForgetPasswordVc: ForgetPasswordViewModelProtocol {
     func forgetPasswordLinkSent(forgetPasswordResponse: ForgetPasswordModel) {
         DispatchQueue.main.async {
-            Alert().alertOkView(viewController: self, message: forgetPasswordResponse.message)
+            Alert.sharedInstance.alertOkView(viewController: self, message: forgetPasswordResponse.message)
         }
     }
     
     func showActivityIndicator() {
-        //indicator show
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.showIndicator(view: self)
+        }
     }
     
     func hideActivityIndicator() {
-        //hide indictor
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.hideActivity()
+        }
     }
     
     func showMessage(message: String) {
         DispatchQueue.main.async {
-            Alert().alertOkView(viewController: self, message: message)
+            Alert.sharedInstance.alertOkView(viewController: self, message: message)
         }
     }
     

@@ -2,23 +2,35 @@ PODS:
   - Cosmos (21.0.0)
   - DropDown (2.3.13)
   - IQKeyboardManager (6.5.5)
+  - Kingfisher (5.13.0):
+    - Kingfisher/Core (= 5.13.0)
+  - Kingfisher/Core (5.13.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
 
 DEPENDENCIES:
   - Cosmos
   - DropDown
   - IQKeyboardManager
+  - Kingfisher
+  - NVActivityIndicatorView
 
 SPEC REPOS:
   trunk:
     - Cosmos
     - DropDown
     - IQKeyboardManager
+    - Kingfisher
+    - NVActivityIndicatorView
 
 SPEC CHECKSUMS:
   Cosmos: 3dfb6e4ba48bd48b8c9aa2a77048ae11ed114f96
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
 
-PODFILE CHECKSUM: 1d19e26ffc608c698fa58289040bce0f688147b2
+PODFILE CHECKSUM: f26549f6c64383a406f73327507b494dcea2c757
 
 COCOAPODS: 1.8.4

@@ -19,5 +19,7 @@ target 'HomeHealthPro' do
   pod 'DropDown'
   pod 'IQKeyboardManager'
   pod 'Cosmos'
+  pod 'Kingfisher'
+  pod 'NVActivityIndicatorView'
 
 end

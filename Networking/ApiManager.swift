@@ -38,13 +38,15 @@ class ApiManager {
             do {
                 let url = endpoints.url
                 print(url)
+                print("Param \(param)")
                 
                 var urlRequest = URLRequest(url: url)
                 urlRequest.httpMethod = methodType.rawValue
                 urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
                 
                 if isAuthRequired{
-                    urlRequest.addValue("Bearer \(APIKey.token)", forHTTPHeaderField:"Authorization")
+                    urlRequest.addValue("Bearer \(GeneralUserDefaultsManager.sharedInstance.token)", forHTTPHeaderField:"Authorization")
                 }
                 
                 if methodType == .post, (param != nil) {

@@ -8,10 +8,6 @@
 
 import Foundation
 
- struct APIKey {
-   static let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Ijg4Q0M1OUE5LTYwNEYtNDg2My1BMEYxLTVDOTI5MDc5RDJGNiIsInJvbGUiOiJBR0VOQ1kiLCJuYmYiOjE1ODQxMDQ3MzQsImV4cCI6MTU4NDE5MTEzNCwiaWF0IjoxNTg0MTA0NzM0fQ.67b_vtI_JwDQ4kqmHzK028xzCjo8cqKvYmv36_IHlVA"
-}
-
 fileprivate let environment = Environment.dev
 
 enum ResponseError {
@@ -72,13 +68,40 @@ extension Environment {
     var domain: String {
         switch self {
         case .dev:
-            return "172.16.3.19:85/api/"
+            //return "172.16.3.19:85/api/"
+            return "27.106.74.218:8002"
         case .test:
             return ""
         case .uat:
             return ""
         case .live:
             return ""
+        }
+    }
+    
+    var folder: String {
+        switch self {
+        case .dev:
+            return "/api/"
+        case .test:
+            return "/api/"
+        case .uat:
+            return "/api/"
+        case .live:
+            return "/api/"
+        }
+    }
+}
+
+enum BaseUrl{
+    case baseUrl
+}
+
+extension BaseUrl{
+    var baseUrlString:String {
+        switch self {
+        case .baseUrl:
+            return environment.HTTPProtocol + environment.domain
         }
     }
 }
@@ -88,16 +111,29 @@ enum RemoteService {
     case masterList
     case agencyAdd
     case forgetPassword
+    case verifyOTP
+    case resendOTP
+    case agencyDashboard
+    case logout
+    case clinicianList
+    case patientList
 }
 
 extension RemoteService {
     
     var url: URL {
         switch self {
-        case .login: return URL(string: environment.HTTPProtocol + environment.domain + UrlConstant.loginUrl.identifer)!
-        case .masterList: return URL(string: environment.HTTPProtocol + environment.domain + UrlConstant.masterList.identifer)!
-        case .agencyAdd: return URL(string: environment.HTTPProtocol + environment.domain + UrlConstant.agencyAdd.identifer)!
-        case .forgetPassword: return URL(string: environment.HTTPProtocol + environment.domain + UrlConstant.forgetPassword.identifer)!
+        case .login: return URL(string: environment.HTTPProtocol + environment.domain + environment.folder + UrlConstant.loginUrl.identifer)!
+        case .masterList: return URL(string: environment.HTTPProtocol + environment.domain + environment.folder +  UrlConstant.masterList.identifer)!
+        case .agencyAdd: return URL(string: environment.HTTPProtocol + environment.domain + environment.folder + UrlConstant.agencyAdd.identifer)!
+        case .forgetPassword: return URL(string: environment.HTTPProtocol + environment.domain + environment.folder + UrlConstant.forgetPassword.identifer)!
+        case .resendOTP : return URL(string: environment.HTTPProtocol + environment.domain + environment.folder + UrlConstant.resendOTP.identifer)!
+        case .verifyOTP : return URL(string: environment.HTTPProtocol + environment.domain + environment.folder + UrlConstant.verifyOTP.identifer)!
+        case .agencyDashboard: return URL(string: environment.HTTPProtocol + environment.domain  + environment.folder + UrlConstant.agencyDashboard.identifer)!
+        case .logout: return URL(string: environment.HTTPProtocol + environment.domain + environment.folder + UrlConstant.logout.identifer)!
+        case .clinicianList: return URL(string: environment.HTTPProtocol + environment.domain + environment.folder + UrlConstant.clinicianList.identifer)!
+        case .patientList: return URL(string: environment.HTTPProtocol + environment.domain + environment.folder + UrlConstant.patientList.identifer)!
+
         }
     }
 }

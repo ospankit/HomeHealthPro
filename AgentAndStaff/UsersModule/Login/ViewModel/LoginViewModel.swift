@@ -33,7 +33,7 @@ class LoginViewModel {
                 self.loginResponse = resp
                 self.delegate?.loginSucess()
             case .failure(let error):
-                self.delegate?.showMessage(message: error.localizedDescription)
+                self.delegate?.showMessage(message: error.errorDescription)
             }
         }
     }

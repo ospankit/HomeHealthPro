@@ -17,8 +17,11 @@ class MainContainerController: UIViewController {
     
     var navController : DashBoardNavigation?
     
+    let viewModel = MainControllerViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -66,9 +69,12 @@ class MainContainerController: UIViewController {
             dismiss(animated: false, completion: nil)
         case .Clinicians:
             menuButton.isHidden = true
-            let destination = storyboard?.instantiateViewController(identifier: Controller.tabBarDashboard.identifier) as! TabBarDashboard
-            destination.setSelectedIndex = 1
-            navController?.pushViewController(destination, animated: true)
+            let destination = navController?.tabController
+            //let destination = storyboard?.instantiateViewController(identifier: Controller.tabBarDashboard.identifier) as! TabBarDashboard
+            //destination?.setSelectedIndex = 1
+            //destination?.initialSetting()
+            //navController?.pushViewController(destination, animated: true)
+            print(destination)
             menuTransitaionOUT()
             dismiss(animated: false, completion: nil)
         case .Patients:
@@ -82,8 +88,7 @@ class MainContainerController: UIViewController {
             menuTransitaionOUT()
             dismiss(animated: true, completion: nil)
         case .Logout:
-            menuTransitaionOUT()
-           dismiss(animated: false, completion: nil)
+            self.viewModel.logoutInitiated()
         }
     }
 }
@@ -104,4 +109,35 @@ extension MainContainerController: hideMenuButtonProtocol{
             menuButton.isHidden = true
         }
     }
+}
+
+extension MainContainerController : MainControllerViewModelProtocol {
+    func showActivityIndicator() {
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.showIndicator(view: self)
+        }
+    }
+    
+    func hideActivityIndicator() {
+        DispatchQueue.main.async {
+            ActivityIndicator.shared.hideActivity()
+        }
+    }
+    
+    func showMessage(message: String) {
+        DispatchQueue.main.async {
+            Alert.sharedInstance.alertOkView(viewController: self, message: message)
+        }
+    }
+    
+    func logoutOutSucess() {
+        GeneralUserDefaultsManager.sharedInstance.cleanLoginData()
+        DispatchQueue.main.async {
+            let vc = UIStoryboard.init(name: StoryBoard.Login.indentifier, bundle: nil).instantiateViewController(identifier: Controller.LoginVc.identifier) as! LoginVc
+            UIApplication.shared.windows.first?.rootViewController = vc
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            
+        }
+    }
+        
 }
